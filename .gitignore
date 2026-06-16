@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.venv/
+venv/
+
+# Node / web tooling
+node_modules/
+dist/
+build/
+.vite/
+
+# Local generated outputs
+tmp/
+output/
+!project/output/
+!project/output/**
+*.log
+
+# OS/editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

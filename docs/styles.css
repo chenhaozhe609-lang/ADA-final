@@ -1,0 +1,433 @@
+:root {
+  color-scheme: light;
+  --bg: oklch(97% 0.006 88);
+  --panel: oklch(99% 0.004 88);
+  --panel-2: oklch(94% 0.008 88);
+  --ink: oklch(23% 0.02 76);
+  --muted: oklch(48% 0.018 76);
+  --line: oklch(86% 0.012 88);
+  --accent: oklch(47% 0.13 156);
+  --accent-soft: oklch(88% 0.055 156);
+  --warn: oklch(60% 0.12 48);
+  --danger: oklch(54% 0.13 28);
+  --good: oklch(49% 0.13 156);
+  --shadow: 0 16px 40px oklch(30% 0.02 76 / 9%);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", system-ui, sans-serif;
+  font-size: 14px;
+  letter-spacing: 0;
+  overflow-x: hidden;
+}
+
+.topbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+  min-height: 88px;
+  padding: 20px 28px;
+  border-bottom: 1px solid var(--line);
+  background: oklch(98% 0.005 88);
+}
+
+.eyebrow {
+  margin: 0 0 6px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
+}
+
+h1 {
+  margin-bottom: 0;
+  font-size: 26px;
+  line-height: 1.1;
+  font-weight: 760;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+}
+
+h2 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  line-height: 1.25;
+  font-weight: 730;
+}
+
+p {
+  color: var(--muted);
+  line-height: 1.5;
+  overflow-wrap: anywhere;
+}
+
+.topbar-actions {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  color: var(--muted);
+  font-size: 13px;
+}
+
+.status-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 99px;
+  background: var(--accent);
+}
+
+.shell {
+  display: grid;
+  grid-template-columns: 300px minmax(0, 1fr);
+  gap: 22px;
+  padding: 22px;
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.story-panel {
+  position: sticky;
+  top: 18px;
+  align-self: start;
+  display: grid;
+  gap: 18px;
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.compact-list {
+  display: grid;
+  gap: 8px;
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+.small-copy {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.content {
+  display: grid;
+  gap: 18px;
+  min-width: 0;
+}
+
+.summary-strip {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.metric {
+  min-height: 98px;
+  padding: 16px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+}
+
+.metric strong {
+  display: block;
+  margin-bottom: 8px;
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 650;
+  text-transform: uppercase;
+}
+
+.metric span {
+  display: block;
+  font-size: 25px;
+  line-height: 1.05;
+  font-weight: 760;
+}
+
+.metric small {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+}
+
+.grid {
+  display: grid;
+  gap: 18px;
+}
+
+.grid.two {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.panel {
+  padding: 18px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: var(--panel);
+  box-shadow: var(--shadow);
+  min-width: 0;
+}
+
+.panel-head {
+  display: flex;
+  justify-content: space-between;
+  gap: 14px;
+  margin-bottom: 14px;
+}
+
+.panel-head p {
+  margin-bottom: 0;
+  font-size: 13px;
+}
+
+.bar-list {
+  display: grid;
+  gap: 12px;
+}
+
+.bar-row {
+  display: grid;
+  grid-template-columns: 72px minmax(0, 1fr) 86px;
+  align-items: center;
+  gap: 10px;
+}
+
+.bar-label {
+  color: var(--muted);
+  font-weight: 650;
+}
+
+.bar-track {
+  height: 16px;
+  border-radius: 6px;
+  background: var(--panel-2);
+  overflow: hidden;
+}
+
+.bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  background: var(--accent);
+}
+
+.bar-value {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  font-weight: 700;
+}
+
+.data-table {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-variant-numeric: tabular-nums;
+}
+
+th,
+td {
+  padding: 9px 8px;
+  border-bottom: 1px solid var(--line);
+  text-align: right;
+  white-space: nowrap;
+}
+
+th:first-child,
+td:first-child {
+  text-align: left;
+}
+
+th {
+  color: var(--muted);
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.compact td,
+.compact th {
+  padding-top: 8px;
+  padding-bottom: 8px;
+}
+
+.line-chart {
+  min-height: 260px;
+}
+
+.line-chart svg {
+  width: 100%;
+  height: 260px;
+  display: block;
+}
+
+.axis {
+  stroke: var(--line);
+  stroke-width: 1;
+}
+
+.line-revenue {
+  fill: none;
+  stroke: var(--accent);
+  stroke-width: 3;
+}
+
+.line-margin {
+  fill: none;
+  stroke: var(--warn);
+  stroke-width: 3;
+}
+
+.line-inventory {
+  fill: none;
+  stroke: var(--danger);
+  stroke-width: 3;
+}
+
+.legend {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.legend span::before {
+  content: "";
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin-right: 6px;
+  border-radius: 3px;
+  background: var(--accent);
+}
+
+.legend span:nth-child(2)::before {
+  background: var(--warn);
+}
+
+.legend span:nth-child(3)::before {
+  background: var(--danger);
+}
+
+.heatmap {
+  overflow-x: auto;
+}
+
+.heatmap table td {
+  min-width: 72px;
+  border: 2px solid var(--panel);
+  border-radius: 4px;
+  font-weight: 700;
+}
+
+.stress-low {
+  color: var(--danger);
+}
+
+.stress-mid {
+  color: var(--warn);
+}
+
+.stress-high {
+  color: var(--good);
+}
+
+@media (max-width: 980px) {
+  h1 {
+    font-size: 23px;
+  }
+
+  .topbar {
+    padding: 18px;
+  }
+
+  .shell {
+    grid-template-columns: 1fr;
+    padding: 14px;
+    gap: 14px;
+    width: 100vw;
+  }
+
+  .story-panel {
+    position: static;
+  }
+
+  .summary-strip,
+  .grid.two {
+    grid-template-columns: 1fr;
+  }
+
+  .topbar {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .bar-row {
+    grid-template-columns: 1fr auto;
+    grid-template-areas:
+      "label value"
+      "track track";
+    gap: 8px;
+  }
+
+  .bar-label {
+    grid-area: label;
+  }
+
+  .bar-track {
+    grid-area: track;
+  }
+
+  .bar-value {
+    grid-area: value;
+  }
+
+  .panel,
+  .story-panel,
+  .metric {
+    padding: 14px;
+    width: calc(100vw - 28px);
+    max-width: calc(100vw - 28px);
+  }
+
+  .content,
+  .summary-strip,
+  .grid {
+    width: calc(100vw - 28px);
+    max-width: calc(100vw - 28px);
+  }
+
+  .story-panel p {
+    max-width: 36ch;
+  }
+
+  .panel-head p {
+    max-width: 34ch;
+  }
+}

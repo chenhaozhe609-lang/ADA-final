@@ -1,0 +1,108 @@
+{
+  "model_version": "calibrated_mature_growth",
+  "valuation_date": "2026-06-15",
+  "market_price": 116.21,
+  "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15.",
+  "base_period_end": "2026-02-01",
+  "source_files": [
+    "project/data/processed/lulu_annual_curated.csv",
+    "project/data/processed/lulu_operating_metrics.csv"
+  ],
+  "assumptions": [
+    {
+      "name": "Bear",
+      "year1_growth": 0.005,
+      "year5_growth": 0.03,
+      "year10_growth": 0.02,
+      "target_operating_margin": 0.18,
+      "sales_to_capital": 2.0,
+      "wacc_start": 0.1,
+      "wacc_terminal": 0.0875,
+      "terminal_growth": 0.0175,
+      "tax_rate": 0.25,
+      "description": "North America remains weak, international growth slows, and margin pressure persists."
+    },
+    {
+      "name": "Base",
+      "year1_growth": 0.025,
+      "year5_growth": 0.055,
+      "year10_growth": 0.0275,
+      "target_operating_margin": 0.2,
+      "sales_to_capital": 2.3,
+      "wacc_start": 0.0925,
+      "wacc_terminal": 0.0825,
+      "terminal_growth": 0.02,
+      "tax_rate": 0.25,
+      "description": "lululemon transitions from hyper-growth to mature premium retail: Americas stabilizes, international expansion continues, and margins partially recover."
+    },
+    {
+      "name": "Bull",
+      "year1_growth": 0.055,
+      "year5_growth": 0.085,
+      "year10_growth": 0.04,
+      "target_operating_margin": 0.225,
+      "sales_to_capital": 2.8,
+      "wacc_start": 0.0825,
+      "wacc_terminal": 0.075,
+      "terminal_growth": 0.025,
+      "tax_rate": 0.24,
+      "description": "International expansion remains strong, brand heat improves, and operating leverage recovers."
+    }
+  ],
+  "scenario_summary": [
+    {
+      "scenario": "Bear",
+      "description": "North America remains weak, international growth slows, and margin pressure persists.",
+      "pv_fcff": 10050773007.765661,
+      "terminal_value": 24804669811.38238,
+      "pv_terminal_value": 10182598216.16546,
+      "enterprise_value": 20233371223.93112,
+      "model_version": "calibrated_mature_growth",
+      "cash": 1807202000.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_value": 20242132223.93112,
+      "diluted_shares": 119068000.0,
+      "fair_value_per_share": 170.0048058582585,
+      "market_price": 116.21,
+      "price_value_gap_pct": -0.31643108903115313,
+      "valuation_date": "2026-06-15",
+      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+    },
+    {
+      "scenario": "Base",
+      "description": "lululemon transitions from hyper-growth to mature premium retail: Americas stabilizes, international expansion continues, and margins partially recover.",
+      "pv_fcff": 11548290025.561493,
+      "terminal_value": 36829148931.219795,
+      "pv_terminal_value": 15992317524.211075,
+      "enterprise_value": 27540607549.772568,
+      "model_version": "calibrated_mature_growth",
+      "cash": 1807202000.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_value": 27549368549.772568,
+      "diluted_shares": 119068000.0,
+      "fair_value_per_share": 231.37508440363968,
+      "market_price": 116.21,
+      "price_value_gap_pct": -0.49774194442964004,
+      "valuation_date": "2026-06-15",
+      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+    },
+    {
+      "scenario": "Bull",
+      "description": "International expansion remains strong, brand heat improves, and operating leverage recovers.",
+      "pv_fcff": 14631854369.409681,
+      "terminal_value": 66510547516.10628,
+      "pv_terminal_value": 31275270744.44701,
+      "enterprise_value": 45907125113.85669,
+      "model_version": "calibrated_mature_growth",
+      "cash": 1807202000.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_value": 45915886113.85669,
+      "diluted_shares": 119068000.0,
+      "fair_value_per_share": 385.6274239414174,
+      "market_price": 116.21,
+      "price_value_gap_pct": -0.6986469509552982,
+      "valuation_date": "2026-06-15",
+      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+    }
+  ]
+}

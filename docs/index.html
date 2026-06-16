@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>LULU Valuation Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <div>
+        <p class="eyebrow">Accounting Data Analysis Final Project</p>
+        <h1>lululemon valuation dashboard</h1>
+      </div>
+      <div class="topbar-actions">
+        <span class="status-dot"></span>
+        <span>Calibrated mature-growth model</span>
+      </div>
+    </header>
+
+    <main class="shell">
+      <aside class="story-panel">
+        <section>
+          <h2>Valuation Story</h2>
+          <p>
+            lululemon is transitioning from hyper-growth to mature premium retail. The
+            model tests whether the market is overreacting to Americas weakness while
+            China Mainland and Rest of World continue to grow.
+          </p>
+        </section>
+        <section>
+          <h2>Story To Numbers</h2>
+          <ul class="compact-list">
+            <li>Lower near-term revenue growth.</li>
+            <li>Partial margin recovery, not a return to peak.</li>
+            <li>Meaningful reinvestment for global expansion.</li>
+            <li>Higher risk premium for discretionary retail.</li>
+            <li>Mature terminal growth.</li>
+          </ul>
+        </section>
+        <section>
+          <h2>Model Files</h2>
+          <p class="small-copy">Data is generated from SEC filings and the local DCF scripts.</p>
+        </section>
+      </aside>
+
+      <section class="content">
+        <section class="summary-strip" id="summaryStrip"></section>
+
+        <section class="grid two">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Scenario Value</h2>
+                <p>Fair value per share compared with the temporary market price.</p>
+              </div>
+            </div>
+            <div id="scenarioBars" class="bar-list"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>First-Pass To Calibrated</h2>
+                <p>How the mature-growth story changed valuation outputs.</p>
+              </div>
+            </div>
+            <div id="comparisonTable" class="data-table compact"></div>
+          </article>
+        </section>
+
+        <section class="grid two">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Historical Fundamentals</h2>
+                <p>Revenue, operating margin, and inventory intensity.</p>
+              </div>
+            </div>
+            <div id="historyChart" class="line-chart"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Operating Story Drivers</h2>
+                <p>Latest annual market growth and comparable sales pressure.</p>
+              </div>
+            </div>
+            <div id="driverTable" class="data-table"></div>
+          </article>
+        </section>
+
+        <section class="grid two">
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>WACC And Terminal Growth</h2>
+                <p>Fair value per share sensitivity.</p>
+              </div>
+            </div>
+            <div id="waccHeatmap" class="heatmap"></div>
+          </article>
+
+          <article class="panel">
+            <div class="panel-head">
+              <div>
+                <h2>Growth And Margin</h2>
+                <p>Fair value per share sensitivity.</p>
+              </div>
+            </div>
+            <div id="growthHeatmap" class="heatmap"></div>
+          </article>
+        </section>
+
+        <section class="panel">
+          <div class="panel-head">
+            <div>
+              <h2>Market-Implied Stress</h2>
+              <p>Assumption combinations closest to the temporary market price.</p>
+            </div>
+          </div>
+          <div id="stressTable" class="data-table"></div>
+        </section>
+      </section>
+    </main>
+
+    <script src="./dashboard-data.js"></script>
+    <script src="./app.js"></script>
+  </body>
+</html>

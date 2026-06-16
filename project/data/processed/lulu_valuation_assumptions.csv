@@ -1,0 +1,4 @@
+name,year1_growth,year5_growth,year10_growth,target_operating_margin,sales_to_capital,wacc_start,wacc_terminal,terminal_growth,tax_rate,description
+Bear,0.005,0.03,0.02,0.18,2.0,0.1,0.0875,0.0175,0.25,"North America remains weak, international growth slows, and margin pressure persists."
+Base,0.025,0.055,0.0275,0.2,2.3,0.0925,0.0825,0.02,0.25,"lululemon transitions from hyper-growth to mature premium retail: Americas stabilizes, international expansion continues, and margins partially recover."
+Bull,0.055,0.085,0.04,0.225,2.8,0.0825,0.075,0.025,0.24,"International expansion remains strong, brand heat improves, and operating leverage recovers."
