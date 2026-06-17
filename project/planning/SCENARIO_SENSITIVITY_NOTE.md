@@ -9,7 +9,7 @@ The model now includes:
 - Bear/base/bull scenario outputs.
 - WACC versus terminal growth sensitivity.
 - Medium-term revenue growth versus target operating margin sensitivity.
-- A market-implied stress test that searches for assumptions close to the temporary market price of `$116.21`.
+- A market-implied stress test that searches for assumptions close to the confirmed valuation-date market price of `$116.21`.
 
 ## Output Files
 
@@ -34,7 +34,7 @@ The Excel workbook now includes:
 
 ## Scenario Results
 
-Using the calibrated mature-growth model and the temporary market price of `$116.21`:
+Using the calibrated mature-growth model and the confirmed valuation-date market price of `$116.21`:
 
 | Scenario | Fair Value Per Share |
 | --- | ---: |
@@ -50,7 +50,7 @@ The growth versus margin sensitivity shows that even with year-5 revenue growth 
 
 ## Market-Implied Stress Test
 
-Because the ordinary sensitivity grids still produced values above the temporary market price, a harsher stress table was added.
+Because the ordinary sensitivity grids still produced values above the valuation-date market price, a harsher stress table was added.
 
 In this stress test, the model assumes:
 
@@ -73,4 +73,3 @@ The calibrated model does not simply say "the market is wrong." A better interpr
 > The current market price appears to embed a much harsher long-term story than our base case. It may assume that North America weakness persists, international growth fails to offset the slowdown, margins reset materially lower, and investors demand a higher risk premium.
 
 This gives the final report a clear discussion point: the valuation gap is not just a number; it is a disagreement about lululemon's future story.
-

@@ -34,7 +34,7 @@ OUTPUT_DIR = BASE_DIR / "output"
 
 VALUATION_DATE = "2026-06-15"
 MARKET_PRICE = 116.21
-MARKET_PRICE_NOTE = "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+MARKET_PRICE_NOTE = "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
 MODEL_VERSION = "calibrated_mature_growth"
 
 

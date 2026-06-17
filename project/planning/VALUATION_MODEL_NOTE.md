@@ -58,7 +58,7 @@ Story: International expansion remains strong, brand heat improves, and operatin
 
 ## Current First-Pass Results
 
-Using the temporary market price input of `$116.21` from 2026-06-15:
+Using the confirmed valuation-date market price of `$116.21` from MarketWatch on 2026-06-15:
 
 | Scenario | Fair Value Per Share | Market Price / Value Gap |
 | --- | ---: | ---: |
@@ -96,7 +96,7 @@ See `project/planning/VALUATION_STORY.md` for the full story memo.
 
 ## Calibrated Results
 
-Using the same temporary market price input of `$116.21` from 2026-06-15:
+Using the same confirmed valuation-date market price of `$116.21` from MarketWatch on 2026-06-15:
 
 | Scenario | First-Pass Fair Value | Calibrated Fair Value | Change | Market Price / Calibrated Value Gap |
 | --- | ---: | ---: | ---: | ---: |
@@ -108,7 +108,7 @@ Interpretation:
 
 - The calibrated model is materially more conservative than the first-pass model.
 - Base-case fair value falls from about `$341` to about `$231` per share.
-- Even after calibration, the model still suggests that the temporary market price is below intrinsic value.
+- Even after calibration, the model still suggests that the valuation-date market price is below intrinsic value.
 - The report should not present this as proof that the market is wrong. Instead, it should frame the difference as a testable disagreement: the market may be pricing in a harsher and more persistent deterioration than our mature-growth base case.
 
 ## Key Assumption Changes

@@ -4,7 +4,7 @@ window.LULU_DASHBOARD_DATA = {
     "ticker": "LULU",
     "modelVersion": "calibrated mature-growth",
     "marketPrice": 116.21,
-    "marketPriceNote": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+    "marketPriceNote": "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
   },
   "historicalRatios": [
     {
@@ -390,7 +390,7 @@ window.LULU_DASHBOARD_DATA = {
       "market_price": 116.21,
       "price_value_gap_pct": -0.3164310890311531,
       "valuation_date": "2026-06-15",
-      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+      "market_price_note": "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
     },
     {
       "scenario": "Base",
@@ -408,7 +408,7 @@ window.LULU_DASHBOARD_DATA = {
       "market_price": 116.21,
       "price_value_gap_pct": -0.49774194442964,
       "valuation_date": "2026-06-15",
-      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+      "market_price_note": "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
     },
     {
       "scenario": "Bull",
@@ -426,7 +426,7 @@ window.LULU_DASHBOARD_DATA = {
       "market_price": 116.21,
       "price_value_gap_pct": -0.6986469509552982,
       "valuation_date": "2026-06-15",
-      "market_price_note": "Temporary input: MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+      "market_price_note": "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
     }
   ],
   "dcfForecast": [

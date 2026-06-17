@@ -1,0 +1,337 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>LULU Presentation and Script Guide</title>
+  <style>
+    @page { size: A4; margin: 18mm 16mm; }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: #1d1d1f;
+      font-family: "Segoe UI", Arial, sans-serif;
+      font-size: 10.5pt;
+      line-height: 1.52;
+      background: white;
+    }
+    h1, h2, h3 { color: #111; line-height: 1.2; page-break-after: avoid; }
+    h1 { font-size: 24pt; margin: 0 0 8mm; }
+    h2 { font-size: 16pt; margin: 9mm 0 3mm; border-top: 1px solid #ddd; padding-top: 5mm; }
+    h3 { font-size: 12pt; margin: 6mm 0 2mm; }
+    p { margin: 0 0 3.8mm; }
+    ul { margin: 0 0 4mm 0; padding-left: 5.5mm; }
+    li { margin: 0 0 2mm; }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 4mm 0 6mm;
+      page-break-inside: avoid;
+      font-size: 9.5pt;
+    }
+    th, td { border-bottom: 1px solid #d8d8d8; padding: 6px 7px; vertical-align: top; }
+    th { text-align: left; background: #f4f4f2; font-weight: 650; }
+    td.num { text-align: right; white-space: nowrap; }
+    code { font-family: Consolas, "Courier New", monospace; font-size: 90%; }
+    .formula {
+      margin: 3mm 0 5mm;
+      padding: 8px 10px;
+      background: #f7f7f5;
+      border-left: 3px solid #555;
+      font-family: Consolas, "Courier New", monospace;
+      font-size: 9.5pt;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+<h1>LULU 估值项目：PPT 制作与演讲稿撰写指南</h1>
+<p>这份指南用于控制最终展示的风格、内容划分和叙事节奏。PPT 和演讲稿应由负责展示的 2-3 位同学亲自完成；本指南只规定边界、结构和质量标准，避免不同组员各写各的，导致展示口径不一致。</p>
+<p>语言原则：slides 必须使用英文；现场演讲可以使用中文，但常见估值和财务术语建议保留英文，例如 DCF、FCFF、WACC、terminal value、operating margin、market price、fair value、scenario analysis、sensitivity analysis。这样既满足英文材料要求，也能让中文讲解保持清楚自然。</p>
+<h2>1. 展示目标</h2>
+<p>15 分钟 presentation 的核心目标不是把报告全文复述一遍，而是让听众理解三件事：</p>
+<ul>
+<li>我们为什么选择 lululemon。</li>
+<li>我们如何把 business story 转换成 DCF valuation assumptions。</li>
+<li>为什么模型估值和市场价格之间出现较大差距，以及这个差距应该如何解释。</li>
+</ul>
+<p>最终展示要像一个 case study，而不是单纯的 Excel 结果汇报。听众应该听完后知道：如果他们想复制这个估值，需要收集哪些数据、设置哪些关键假设、如何测试结论是否稳健。</p>
+<h2>2. 推荐人员分工</h2>
+<p>如果 2 位同学主讲：</p>
+<ul>
+<li>Speaker 1：公司背景、行业、历史基本面、估值故事。</li>
+<li>Speaker 2：DCF 方法、base case、scenario/sensitivity、market price gap、结论。</li>
+</ul>
+<p>如果 3 位同学主讲：</p>
+<ul>
+<li>Speaker 1：开场、公司背景、行业和历史基本面。</li>
+<li>Speaker 2：valuation story、DCF 方法、base case 估值。</li>
+<li>Speaker 3：scenario/sensitivity、market-implied stress、market price gap、结论。</li>
+</ul>
+<p>即使只有 2-3 人主讲，所有组员仍应上台。非主讲同学可以负责切换页面、回答 Q&amp;A、展示 dashboard 或补充数据来源。</p>
+<h2>3. 时间分配</h2>
+<p>总时长控制在 15 分钟，建议按下面节奏：</p>
+<table>
+<thead><tr>
+<th>时间</th>
+<th>内容</th>
+<th>负责人建议</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="num">0:00-1:00</td>
+<td>开场、研究问题、结论预告</td>
+<td class="num">Speaker 1</td>
+</tr>
+<tr>
+<td class="num">1:00-3:00</td>
+<td>公司概况与为什么选择 LULU</td>
+<td class="num">Speaker 1</td>
+</tr>
+<tr>
+<td class="num">3:00-5:00</td>
+<td>行业与历史基本面</td>
+<td class="num">Speaker 1</td>
+</tr>
+<tr>
+<td class="num">5:00-7:00</td>
+<td>Valuation story: 从 hyper-growth 到 mature premium retail</td>
+<td class="num">Speaker 2</td>
+</tr>
+<tr>
+<td class="num">7:00-10:00</td>
+<td>DCF 方法与 base case 结果</td>
+<td class="num">Speaker 2</td>
+</tr>
+<tr>
+<td class="num">10:00-12:30</td>
+<td>Bear/base/bull 和 sensitivity</td>
+<td class="num">Speaker 2 或 3</td>
+</tr>
+<tr>
+<td class="num">12:30-14:00</td>
+<td>Market price gap: 市场可能隐含什么悲观故事</td>
+<td class="num">Speaker 3</td>
+</tr>
+<tr>
+<td class="num">14:00-15:00</td>
+<td>结论、局限性、可复现性</td>
+<td class="num">Speaker 3</td>
+</tr>
+</tbody></table>
+<p>每位主讲人应提前练习。如果用英文演讲，目标语速约为每分钟 120-140 个英文单词；如果用中文演讲，也要避免临场自由发挥过多。无论使用中文还是英文演讲，slides 一律用英文，关键估值术语保留英文。</p>
+<h2>4. PPT 页数与内容划分</h2>
+<p>建议 11-13 页，不要超过 14 页。每页只承担一个功能。</p>
+<table>
+<thead><tr>
+<th>Slide</th>
+<th>标题建议</th>
+<th>核心信息</th>
+</tr></thead>
+<tbody>
+<tr>
+<td class="num">1</td>
+<td>lululemon Valuation Case Study</td>
+<td>公司、估值日期、研究问题、组员</td>
+</tr>
+<tr>
+<td class="num">2</td>
+<td>Executive Takeaway</td>
+<td>Fair value $231.38 vs. market price $116.21；base case 显示 undervalued</td>
+</tr>
+<tr>
+<td class="num">3</td>
+<td>Why lululemon?</td>
+<td>公开数据充足、故事清晰、适合 DCF 和 scenario analysis</td>
+</tr>
+<tr>
+<td class="num">4</td>
+<td>Business Overview</td>
+<td>产品、渠道、区域结构；Americas still dominant, international growing</td>
+</tr>
+<tr>
+<td class="num">5</td>
+<td>Industry Context</td>
+<td>Activewear 长期趋势 + 竞争和消费者周期风险</td>
+</tr>
+<tr>
+<td class="num">6</td>
+<td>Historical Fundamentals</td>
+<td>Revenue growth slowing, margin pressure, inventory increase</td>
+</tr>
+<tr>
+<td class="num">7</td>
+<td>Our Valuation Story</td>
+<td>Mature-growth transition：Americas stabilizes, international expands, margins partially recover</td>
+</tr>
+<tr>
+<td class="num">8</td>
+<td>DCF Method</td>
+<td>FCFF 公式、10-year forecast、terminal value、equity bridge</td>
+</tr>
+<tr>
+<td class="num">9</td>
+<td>Base Case Valuation</td>
+<td>EV、equity value、fair value per share；用一张表或 waterfall</td>
+</tr>
+<tr>
+<td class="num">10</td>
+<td>Scenario Results</td>
+<td class="num">Bear $170.00 / Base $231.38 / Bull $385.63</td>
+</tr>
+<tr>
+<td class="num">11</td>
+<td>Sensitivity And Stress Test</td>
+<td>普通 sensitivity 仍高于市价；接近市价需要更悲观假设</td>
+</tr>
+<tr>
+<td class="num">12</td>
+<td>Market Price Gap</td>
+<td>市场可能在定价 structural weakness, lower margin, higher risk</td>
+</tr>
+<tr>
+<td class="num">13</td>
+<td>Conclusion</td>
+<td>Undervalued if base story holds；最大风险；可复现流程</td>
+</tr>
+</tbody></table>
+<p>如果时间紧，可以合并 Slide 5 和 Slide 6，或合并 Slide 10 和 Slide 11。</p>
+<h2>5. PPT 风格要求</h2>
+<p>整体风格应像专业但清晰的课堂 case study，不要做成营销型发布会。</p>
+<ul>
+<li>使用简洁、低噪音的版式：白底或浅灰底，深色文字，少量 lululemon 红色作为强调色。</li>
+<li>每页只放一个主结论，标题尽量写成 conclusion，而不是普通名词。例如用 “Growth Has Slowed, But Economics Remain Strong”，不要只写 “Historical Fundamentals”。</li>
+<li>图表优先于大段文字。能用表格、折线图、柱状图、waterfall 的地方，不要堆 bullet。</li>
+<li>数字保留合理精度：每股价值保留两位小数，金额用 billion，百分比保留一位。</li>
+<li>所有关键数字必须和 report、Excel、dashboard 一致。</li>
+<li>不要使用复杂动画。最多使用简单 appear，用于逐步解释 DCF bridge 或 scenario table。</li>
+<li>不要把 Python 代码截图放进主 PPT。代码可以放 appendix 或 Q&amp;A 备用页。</li>
+</ul>
+<h2>6. 图表建议</h2>
+<p>推荐使用这些图表：</p>
+<ul>
+<li>Revenue trend：显示收入增长放缓。</li>
+<li>Gross / operating margin trend：显示利润率仍强但 FY2025 回落。</li>
+<li>Geographic revenue mix：突出 Americas 占比高、China Mainland 和 Rest of World 增长更快。</li>
+<li>Base case valuation bridge：Enterprise value 到 equity value，再到 fair value per share。</li>
+<li>Scenario bar chart：Bear / Base / Bull fair value per share 与 market price 对比。</li>
+<li>Sensitivity heatmap：WACC vs terminal growth 或 growth vs margin，选择一张最清晰的即可。</li>
+<li>Market-implied stress summary：不用放完整表，放 2-3 条最悲观假设组合。</li>
+</ul>
+<p>可选：如果展示现场允许联网，可以在 Q&amp;A 或最后展示 dashboard；主 PPT 不能依赖网页才能讲清楚。</p>
+<h2>7. 演讲稿写作要求</h2>
+<p>演讲稿必须由主讲同学亲自写，但需要遵守统一口径。演讲稿可以写中文，也可以写中英混合；建议句子主体用中文解释，关键术语使用英文，避免把 DCF、WACC、terminal growth 等术语硬翻译后造成理解混乱。</p>
+<p>每位 speaker 的稿子都应包含：</p>
+<ul>
+<li>开头一句 transition，承接上一位同学。</li>
+<li>每页 1 个主结论，不要逐字朗读 slide。</li>
+<li>对数字的解释，而不是只报数字。</li>
+<li>对不确定性的承认，尤其是 market price gap 部分。</li>
+<li>结尾一句 transition，把话题交给下一位同学。</li>
+</ul>
+<p>不要写成：</p>
+<ul>
+<li>“This slide shows...” 开头连续出现。</li>
+<li>逐条朗读 PPT bullet。</li>
+<li>只说模型结果，不解释 business story。</li>
+<li>直接说 “the stock is definitely undervalued”。</li>
+<li>中文稿中把所有专业词都翻译成不常用中文，导致和 slides 的英文术语对不上。</li>
+</ul>
+<p>建议表达方式：</p>
+<ul>
+<li>“Our base case does not assume a return to hyper-growth. It assumes a mature premium retailer with modest recovery.”</li>
+<li>“The gap is not proof that the market is wrong. It tells us the market may be pricing a harsher story.”</li>
+<li>“The key assumption is whether international growth and partial margin recovery can offset weakness in the Americas.”</li>
+</ul>
+<p>中文演讲可以这样表达：</p>
+<ul>
+<li>“我们的 base case 并不是假设 LULU 回到 hyper-growth，而是把它看作一个 mature premium retailer。”</li>
+<li>“这个 valuation gap 不是证明 market 一定错了，而是说明 market 可能在 pricing 一个更悲观的 story。”</li>
+<li>“最关键的 assumption 是 international growth 和 partial margin recovery 能不能抵消 Americas 的疲软。”</li>
+</ul>
+<h2>8. 必须统一的数字口径</h2>
+<p>以下数字在 PPT、演讲稿、报告中必须保持一致：</p>
+<table>
+<thead><tr>
+<th>项目</th>
+<th>数字</th>
+</tr></thead>
+<tbody>
+<tr>
+<td>Valuation date</td>
+<td class="num">June 15, 2026</td>
+</tr>
+<tr>
+<td>Market price</td>
+<td class="num">$116.21</td>
+</tr>
+<tr>
+<td>Base fair value per share</td>
+<td class="num">$231.38</td>
+</tr>
+<tr>
+<td>Bear fair value per share</td>
+<td class="num">$170.00</td>
+</tr>
+<tr>
+<td>Bull fair value per share</td>
+<td class="num">$385.63</td>
+</tr>
+<tr>
+<td>FY2025 revenue</td>
+<td>$11.10 billion</td>
+</tr>
+<tr>
+<td>FY2025 operating margin</td>
+<td class="num">19.9%</td>
+</tr>
+<tr>
+<td>Base target operating margin</td>
+<td class="num">20.0%</td>
+</tr>
+<tr>
+<td>Base terminal growth</td>
+<td class="num">2.0%</td>
+</tr>
+<tr>
+<td>Base terminal WACC</td>
+<td class="num">8.25%</td>
+</tr>
+</tbody></table>
+<p>如果后续模型更新，必须先更新 report 和 data，再更新 PPT 和演讲稿。</p>
+<h2>9. 内容边界</h2>
+<p>PPT 中可以简化，但不能改变结论。</p>
+<p>可以省略：</p>
+<ul>
+<li>SEC API 技术细节。</li>
+<li>每年完整 DCF forecast 表。</li>
+<li>完整 market-implied stress test 表。</li>
+<li>代码实现细节。</li>
+</ul>
+<p>不能省略：</p>
+<ul>
+<li>为什么选择 LULU。</li>
+<li>从 business story 到 assumptions 的逻辑。</li>
+<li>FCFF DCF 的基本方法。</li>
+<li>Base case fair value 和 market price 对比。</li>
+<li>Scenario/sensitivity 证明结论对假设敏感。</li>
+<li>对 market price gap 的谨慎解释。</li>
+<li>AI/code 使用情况至少在 appendix 或 Q&amp;A 中准备好。</li>
+</ul>
+<h2>10. 最终检查清单</h2>
+<p>PPT 提交或演示前，主讲同学需要完成：</p>
+<ul>
+<li>[ ] 每页标题都是一个清晰结论。</li>
+<li>[ ] 每页不超过 3 个主要信息点。</li>
+<li>[ ] 所有数字与 report 和 Excel 一致。</li>
+<li>[ ] 15 分钟内完整讲完，最好控制在 14 分 30 秒左右。</li>
+<li>[ ] 每位 speaker 的开头和结尾衔接自然。</li>
+<li>[ ] 结论没有说得过度绝对。</li>
+<li>[ ] 准备好回答 “为什么市场价比你们模型低这么多？”。</li>
+<li>[ ] 准备好回答 “AI 在项目中具体做了什么？”。</li>
+<li>[ ] 准备好回答 “如果不用 Excel，你们的模型如何复现？”。</li>
+</ul>
+<h2>11. 推荐结尾话术</h2>
+<p>可以参考下面这段，但主讲同学需要用自己的语言改写：</p>
+<p>Our conclusion is not that the market must be wrong. Our conclusion is that lululemon appears undervalued if the mature-growth story is correct: North America stabilizes, international growth continues, and operating margin partially recovers. The current market price seems to imply a much harsher story. Therefore, the valuation is best understood as a disagreement between two stories, and our model makes that disagreement transparent and testable.</p>
+</body>
+</html>

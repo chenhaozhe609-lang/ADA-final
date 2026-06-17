@@ -16,6 +16,9 @@ tmp/
 output/
 !project/output/
 !project/output/**
+*.inspect.ndjson
+project/output/workbook_previews/
+~$*.xlsx
 *.log
 
 # OS/editor

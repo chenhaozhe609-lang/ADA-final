@@ -8,7 +8,7 @@
 - [x] Index available courseware references.
 - [x] Choose target company: lululemon athletica inc. (LULU).
 - [ ] Assign team roles.
-- [ ] Decide valuation date and market price reference date.
+- [x] Decide valuation date and market price reference date: June 15, 2026; MarketWatch close of $116.21.
 
 ## Phase 1 - Company Selection
 
@@ -23,7 +23,7 @@
 - [x] Collect lululemon annual financial statements for at least 5 years if available.
 - [x] Collect recent filing metadata and latest annual SEC XBRL data.
 - [x] Collect recent trailing twelve month or latest interim data.
-- [ ] Collect share count, market price, cash, debt, minority interest, and non-operating assets.
+- [x] Collect share count, market price, cash, debt-like lease liabilities, and non-operating cash inputs.
 - [ ] Collect industry data: athletic apparel market size, growth, competitors, margins, valuation multiples, and risk indicators.
 - [x] Collect company operating data: store count, regional revenue, product category revenue, comparable sales, gross margin, inventories, and share repurchases.
 - [ ] Curate channel mix data from candidate 10-K tables if needed for the final valuation story.
@@ -41,10 +41,11 @@
 - [x] Estimate first-pass cost of capital.
 - [x] Estimate terminal growth and terminal value.
 - [x] Derive enterprise value, equity value, and value per share.
-- [x] Compare with temporary market price.
+- [x] Compare with final valuation-date market price.
 - [x] Export model outputs to Excel.
+- [x] Create a presentation-ready beautified Excel workbook copy.
 - [ ] Calibrate WACC with beta, risk-free rate, equity risk premium, and peer evidence.
-- [ ] Confirm final valuation date and market price source.
+- [x] Confirm final valuation date and market price source: MarketWatch reported LULU closed at $116.21 on June 15, 2026.
 - [ ] Review and refine assumptions before treating valuation as final.
 
 ## Phase 3.5 - Valuation Story and Assumption Calibration
@@ -88,18 +89,24 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 
 ## Phase 5 - Report
 
-- [ ] Draft report outline.
-- [ ] Write company and industry background.
-- [ ] Write valuation story.
-- [ ] Explain data sources and methodology, using courseware DCF/NPV concepts where appropriate.
-- [ ] Explain assumptions one by one.
-- [ ] Present DCF outputs and scenario analysis.
-- [ ] Discuss difference between fair value and market price.
-- [ ] Add limitations and conclusion.
-- [ ] Add references.
+- [x] Draft report outline.
+- [x] Write company and industry background.
+- [x] Write valuation story.
+- [x] Explain data sources and methodology, using courseware DCF/NPV concepts where appropriate.
+- [x] Explain assumptions one by one.
+- [x] Present DCF outputs and scenario analysis.
+- [x] Discuss difference between fair value and market price.
+- [x] Add limitations and conclusion.
+- [x] Add references/data appendix.
+- [x] Polish first full English report draft for wording, terminology, formula clarity, and internal consistency.
+- [x] Add formal APA-style source citations and references.
+- [x] Create human final review checklist for required group rewrite and verification.
+- [ ] Human group review and rewrite before submission.
 
 ## Phase 6 - Slides and Presentation
 
+- [x] Create PPT style, content-division, and speech-writing guide for student presenters.
+- [x] Update presentation guide: slides must be in English; live speech may be in Chinese with common valuation terms kept in English.
 - [ ] Create 10-14 slide deck for 15 minutes.
 - [ ] Convert report logic into presentation flow.
 - [ ] Add clean charts and valuation tables.
@@ -108,16 +115,17 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 
 ## Phase 7 - AI Supplement
 
-- [ ] Maintain AI usage log.
-- [ ] Summarize AI tools used.
-- [ ] Summarize questions asked to AI.
-- [ ] Include code used for data collection and analysis.
-- [ ] Clearly state which final materials were human-written.
+- [x] Maintain AI usage log.
+- [x] Summarize AI tools used.
+- [x] Summarize questions asked to AI.
+- [x] Include code used for data collection and analysis.
+- [x] Clearly state which final materials must be human-written and reviewed.
+- [ ] Prepare final AI supplementary submission file.
 
 ## Phase 8 - Final QA
 
 - [ ] Check report language and citations.
 - [ ] Check all numbers reconcile between code, Excel, report, and slides.
-- [ ] Check valuation date and market price date.
+- [x] Check valuation date and market price date.
 - [ ] Check PPT can be presented within 15 minutes.
 - [ ] Confirm all required files are ready for submission.

@@ -19,7 +19,7 @@ function renderSummary() {
   const bull = summary.find((row) => row.scenario === "Bull");
   const latest = data.historicalRatios[data.historicalRatios.length - 1];
   const metrics = [
-    ["Market price", fmtMoney(data.meta.marketPrice), "Temporary valuation-date input"],
+    ["Market price", fmtMoney(data.meta.marketPrice), "MarketWatch close on valuation date"],
     ["Base fair value", fmtMoney(base.fair_value_per_share), "Calibrated mature-growth case"],
     ["Scenario range", `${fmtMoney(bear.fair_value_per_share)} to ${fmtMoney(bull.fair_value_per_share)}`, "Bear to bull"],
     ["Latest revenue", fmtBn(latest.revenue), latest.period_end],
