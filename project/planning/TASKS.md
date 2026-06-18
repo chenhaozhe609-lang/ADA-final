@@ -102,6 +102,7 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 - [x] Polish first full English report draft for wording, terminology, formula clarity, and internal consistency.
 - [x] Add formal APA-style source citations and references.
 - [x] Create human final review checklist for required group rewrite and verification.
+- [x] Polish report against updated courseware and add course-aligned WACC/CAPM methodology note.
 - [ ] Human group review and rewrite before submission.
 
 ## Phase 6 - Slides and Presentation

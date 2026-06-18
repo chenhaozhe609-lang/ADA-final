@@ -2,13 +2,13 @@
 
 All dollar amounts are in U.S. dollars unless otherwise stated.
 
-Citation style: APA 7th author-date format.
+This report is prepared as a course valuation case study and should not be read as investment advice.
 
 ## 1. Executive Summary
 
-This report values lululemon athletica inc. (LULU), a premium athletic apparel company, using a free cash flow to the firm (FCFF) discounted cash flow model supported by historical financial data, operating metrics, scenario analysis, and sensitivity tests. The central valuation story is that lululemon is transitioning from a hyper-growth apparel brand into a mature global premium retailer. The company is facing real pressure in the Americas, where fiscal 2025 revenue declined and comparable sales were negative, but it still benefits from brand strength, high gross margins, continued international expansion, and strong growth in China Mainland and Rest of World markets (lululemon athletica inc., 2026a, 2026b).
+This report values lululemon athletica inc. (LULU), a premium athletic apparel company, using a free cash flow to the firm (FCFF) discounted cash flow model supported by historical financial data, operating metrics, scenario analysis, and sensitivity tests. The central valuation story is that lululemon is moving from a hyper-growth apparel brand toward a mature global premium retailer. The company faces real pressure in the Americas, where fiscal 2025 revenue declined and comparable sales were negative, but it still benefits from brand strength, high gross margins, international expansion, and strong growth in China Mainland and Rest of World markets (lululemon athletica inc., 2026a, 2026b).
 
-Using June 15, 2026 as the valuation date and MarketWatch's reported closing price of $116.21 per share, our calibrated base-case DCF estimates lululemon's fair value at $231.38 per share (MarketWatch, 2026). The bear and bull cases produce values of $170.00 and $385.63 per share, respectively. Under the base case, the market price is approximately 49.8% below our estimated intrinsic value, implying that the market may be pricing in a much harsher long-term slowdown than our mature-growth story assumes. Our conclusion is therefore that lululemon appears undervalued under the calibrated base case, but this conclusion depends heavily on whether international growth and partial margin recovery can offset sustained weakness in the Americas.
+Using June 15, 2026 as the valuation date and MarketWatch's reported closing price of $116.21 per share, our calibrated base-case DCF estimates lululemon's fair value at $231.38 per share (MarketWatch, 2026). The bear and bull cases produce values of $170.00 and $385.63 per share, respectively. Under the base case, the market price is approximately 49.8% below our estimated intrinsic value. This suggests that the market may be pricing in a much harsher long-term slowdown than our mature-growth story assumes. Our conclusion is that lululemon appears undervalued under the calibrated base case, but that conclusion depends heavily on whether international growth and partial margin recovery can offset sustained weakness in the Americas.
 
 ## 2. Company Overview
 
@@ -46,7 +46,21 @@ The bear and bull cases are designed to test the same story under different outc
 
 ## 6. DCF Valuation Methodology
 
-We value lululemon using a free cash flow to the firm (FCFF) discounted cash flow model. This method estimates the value of the operating business by forecasting cash flows available to all capital providers, discounting those cash flows at the weighted average cost of capital (WACC), and then converting enterprise value into equity value. The model is built to be transparent and reproducible: it starts with the latest full fiscal-year financials, applies explicit operating assumptions for ten forecast years, calculates terminal value using a growing perpetuity, and then divides equity value by diluted shares outstanding.
+We value lululemon using a free cash flow to the firm (FCFF) discounted cash flow model. This method estimates the value of the operating business by forecasting cash flows available to all capital providers, discounting those cash flows at the weighted average cost of capital (WACC), and then converting enterprise value into equity value. This follows the course's NPV logic: value is the present value of expected future cash flows, and riskier cash flows require a higher discount rate. The model is built to be transparent and reproducible: it starts with the latest full fiscal-year financials, applies explicit operating assumptions for ten forecast years, calculates terminal value using a growing perpetuity, and then divides equity value by diluted shares outstanding.
+
+In a fully built cost-of-capital model, the cost of equity would normally be estimated using the capital asset pricing model (CAPM):
+
+$$
+Cost\ of\ Equity = Risk\text{-}free\ Rate + Beta \times Market\ Risk\ Premium
+$$
+
+WACC would then combine the cost of equity and the after-tax cost of debt according to the company's capital structure:
+
+$$
+WACC = \frac{E}{D + E} \times R_E + \frac{D}{D + E} \times R_D \times (1 - Tax\ Rate)
+$$
+
+For this course project, we use scenario-calibrated WACC assumptions rather than a full beta-based WACC build. This is a simplification, but it is consistent with the valuation story: the bear case uses a higher cost of capital, the bull case uses a lower cost of capital, and the base case reflects a mature discretionary retail risk profile. A fuller version of the model could refine WACC using peer betas, the current risk-free rate, market risk premium evidence, and market-value capital structure.
 
 The forecast begins with fiscal 2025 revenue of $11.10 billion and fiscal 2025 operating margin of 19.9%. For each scenario, revenue growth is interpolated from year 1 to year 5 and then to year 10, rather than assumed as a constant rate. Operating margin gradually moves from the current level toward the scenario target margin. EBIT is calculated as forecast revenue multiplied by operating margin:
 
@@ -92,7 +106,7 @@ $$
 Enterprise\ Value = \sum_{t=1}^{10} \frac{FCFF_t}{Discount\ Factor_t} + \frac{Terminal\ Value}{Discount\ Factor_{10}}
 $$
 
-To move from enterprise value to equity value, we add cash and subtract debt-like operating lease liabilities:
+To move from enterprise value to equity value, we add cash and subtract debt-like operating lease liabilities. This follows the firm-value-to-equity-value logic from the course slides, while recognizing that treating operating leases as debt-like claims is a modeling judgment:
 
 $$
 Equity\ Value = Enterprise\ Value + Cash - Debt\text{-}like\ Lease\ Liabilities
@@ -205,6 +219,8 @@ Key code files include:
 | `project/code/scripts/build_dashboard_data.py` | Convert valuation outputs into dashboard data |
 | `project/code/web/` | Static valuation dashboard source files |
 | `docs/` | GitHub Pages deployment copy of the dashboard |
+
+Course slides in `ref/ref-courseware/` were used as methodology references for accounting data interpretation, inventory analysis, DCF/NPV logic, WACC, CAPM, and firm-value-to-equity-value reasoning.
 
 ### C. AI Usage Reference
 
