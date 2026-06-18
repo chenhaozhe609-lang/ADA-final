@@ -18,6 +18,8 @@ output/
 !project/output/**
 *.inspect.ndjson
 project/output/workbook_previews/
+project/output/courseware_slides_4_*
+project/output/dashboard-dataset-formulas*.png
 ~$*.xlsx
 *.log
 

@@ -62,6 +62,72 @@ function renderScenarioBars() {
   root.append(market);
 }
 
+function renderDatasetStructure() {
+  const items = [
+    {
+      stage: "Raw SEC inputs",
+      files: "SEC submissions API, company facts API, 10-K / 10-Q HTML",
+      role: "Original public filings and XBRL source data.",
+    },
+    {
+      stage: "Processed financials",
+      files: "lulu_annual_curated.csv, lulu_historical_ratios.csv",
+      role: "Revenue, margins, cash, inventory, shares, EPS, leases, and historical ratios.",
+    },
+    {
+      stage: "Operating metrics",
+      files: "lulu_operating_metrics.csv",
+      role: "Store count, geographic revenue, product revenue, comparable sales, and growth drivers.",
+    },
+    {
+      stage: "Model outputs",
+      files: "lulu_dcf_forecast.csv, lulu_scenario_summary.csv, sensitivity CSVs",
+      role: "Ten-year FCFF forecast, valuation bridge, scenarios, sensitivities, and stress tests.",
+    },
+    {
+      stage: "Dashboard data",
+      files: "dashboard-data.js",
+      role: "Static web-ready bundle generated from processed CSV outputs.",
+    },
+  ];
+
+  const root = document.getElementById("datasetStructure");
+  root.innerHTML = "";
+  items.forEach((item, index) => {
+    const card = el("div", "structure-item");
+    const badge = el("span", "step-badge", String(index + 1));
+    const body = el("div", "structure-copy");
+    body.append(el("strong", "", item.stage));
+    body.append(el("code", "", item.files));
+    body.append(el("p", "", item.role));
+    card.append(badge, body);
+    root.append(card);
+  });
+}
+
+function renderFormulaChain() {
+  const formulas = [
+    ["Revenue forecast", "Revenue_t = Revenue_{t-1} × (1 + Growth_t)"],
+    ["Operating profit", "EBIT_t = Revenue_t × Operating Margin_t"],
+    ["After-tax profit", "NOPAT_t = EBIT_t × (1 - Tax Rate)"],
+    ["Reinvestment", "Reinvestment_t = ΔRevenue_t / Sales-to-Capital"],
+    ["Free cash flow", "FCFF_t = NOPAT_t - Reinvestment_t"],
+    ["Terminal value", "TV = FCFF_10 × (1 + g) / (Terminal WACC - g)"],
+    ["Enterprise value", "EV = Σ PV(FCFF_t) + PV(TV)"],
+    ["Equity value", "Equity Value = EV + Cash - Debt-like Lease Liabilities"],
+    ["Per-share value", "Fair Value / Share = Equity Value / Diluted Shares"],
+  ];
+
+  const root = document.getElementById("formulaChain");
+  root.innerHTML = "";
+  formulas.forEach(([label, formula]) => {
+    const row = el("div", "formula-row");
+    row.append(el("span", "formula-label", label));
+    row.append(el("code", "formula-code", formula));
+    root.append(row);
+  });
+}
+
 function renderTable(rootId, columns, rows) {
   const root = document.getElementById(rootId);
   const table = document.createElement("table");
@@ -199,6 +265,8 @@ function renderStress() {
 
 function init() {
   renderSummary();
+  renderDatasetStructure();
+  renderFormulaChain();
   renderScenarioBars();
   renderComparison();
   renderHistoryChart();

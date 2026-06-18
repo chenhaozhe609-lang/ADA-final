@@ -204,6 +204,89 @@ p {
   font-size: 13px;
 }
 
+.structure-list {
+  display: grid;
+  gap: 10px;
+}
+
+.structure-item {
+  display: grid;
+  grid-template-columns: 30px minmax(0, 1fr);
+  gap: 10px;
+  padding: 10px;
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  background: oklch(98% 0.004 88);
+}
+
+.step-badge {
+  display: grid;
+  place-items: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 99px;
+  background: var(--accent);
+  color: white;
+  font-weight: 760;
+  font-size: 12px;
+}
+
+.structure-copy {
+  min-width: 0;
+}
+
+.structure-copy strong,
+.formula-label {
+  display: block;
+  margin-bottom: 4px;
+  font-weight: 740;
+}
+
+.structure-copy code,
+.formula-code {
+  display: block;
+  width: 100%;
+  color: oklch(30% 0.08 156);
+  font-family: "SFMono-Regular", Consolas, "Liberation Mono", monospace;
+  font-size: 12px;
+  line-height: 1.35;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+.structure-copy p {
+  margin: 6px 0 0;
+  font-size: 12px;
+}
+
+.formula-chain {
+  display: grid;
+  gap: 8px;
+}
+
+.formula-row {
+  display: grid;
+  grid-template-columns: 150px minmax(0, 1fr);
+  gap: 12px;
+  align-items: start;
+  padding: 9px 10px;
+  border-bottom: 1px solid var(--line);
+}
+
+.formula-row:first-child {
+  border-top: 1px solid var(--line);
+}
+
+.formula-label {
+  margin-bottom: 0;
+  color: var(--muted);
+  font-size: 12px;
+}
+
+.formula-code {
+  color: var(--ink);
+}
+
 .bar-list {
   display: grid;
   gap: 12px;
@@ -429,5 +512,10 @@ th {
 
   .panel-head p {
     max-width: 34ch;
+  }
+
+  .formula-row {
+    grid-template-columns: 1fr;
+    gap: 4px;
   }
 }
