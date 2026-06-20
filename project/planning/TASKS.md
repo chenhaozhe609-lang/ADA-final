@@ -109,6 +109,7 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 
 - [x] Create PPT style, content-division, and speech-writing guide for student presenters.
 - [x] Update presentation guide: slides must be in English; live speech may be in Chinese with common valuation terms kept in English.
+- [x] Update presentation guide after report WACC/CAPM polish and fix the presentation structure to 3 speakers.
 - [ ] Create 10-14 slide deck for 15 minutes.
 - [ ] Convert report logic into presentation flow.
 - [ ] Add clean charts and valuation tables.

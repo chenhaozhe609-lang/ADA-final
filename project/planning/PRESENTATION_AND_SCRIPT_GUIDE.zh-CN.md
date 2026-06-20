@@ -1,6 +1,6 @@
 # LULU 估值项目：PPT 制作与演讲稿撰写指南
 
-这份指南用于控制最终展示的风格、内容划分和叙事节奏。PPT 和演讲稿应由负责展示的 2-3 位同学亲自完成；本指南只规定边界、结构和质量标准，避免不同组员各写各的，导致展示口径不一致。
+这份指南用于控制最终展示的风格、内容划分和叙事节奏。PPT 和演讲稿应由负责展示的 3 位同学亲自完成；本指南只规定边界、结构和质量标准，避免不同组员各写各的，导致展示口径不一致。
 
 语言原则：slides 必须使用英文；现场演讲可以使用中文，但常见估值和财务术语建议保留英文，例如 DCF、FCFF、WACC、terminal value、operating margin、market price、fair value、scenario analysis、sensitivity analysis。这样既满足英文材料要求，也能让中文讲解保持清楚自然。
 
@@ -14,20 +14,17 @@
 
 最终展示要像一个 case study，而不是单纯的 Excel 结果汇报。听众应该听完后知道：如果他们想复制这个估值，需要收集哪些数据、设置哪些关键假设、如何测试结论是否稳健。
 
-## 2. 推荐人员分工
+## 2. 固定 3 人分工
 
-如果 2 位同学主讲：
+本次 presentation 按 3 位 speaker 固定分工。这样可以把公司与行业、模型方法、情景解释三块内容讲清楚，也能让每个人都有明确责任。
 
-- Speaker 1：公司背景、行业、历史基本面、估值故事。
-- Speaker 2：DCF 方法、base case、scenario/sensitivity、market price gap、结论。
+- Speaker 1：开场、研究问题、公司背景、行业和历史基本面。重点回答 “Why lululemon?” 和 “What changed in the business?”。
+- Speaker 2：valuation story、DCF/NPV 方法、WACC/CAPM 口径、base case 估值。重点回答 “How do we turn the story into numbers?”。
+- Speaker 3：scenario/sensitivity、market-implied stress、market price gap、局限性和结论。重点回答 “Why is our value different from market price?”。
 
-如果 3 位同学主讲：
+Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 scenario-calibrated WACC，并用 CAPM/WACC 作为课程概念框架说明折现率逻辑；目前没有做完整 beta-based WACC 校准，因此应作为 limitation 和 future refinement 提到，不能讲成已经完成了完整市场校准。
 
-- Speaker 1：开场、公司背景、行业和历史基本面。
-- Speaker 2：valuation story、DCF 方法、base case 估值。
-- Speaker 3：scenario/sensitivity、market-implied stress、market price gap、结论。
-
-即使只有 2-3 人主讲，所有组员仍应上台。非主讲同学可以负责切换页面、回答 Q&A、展示 dashboard 或补充数据来源。
+即使只有 3 人主讲，所有组员仍应上台。非主讲同学可以负责切换页面、回答 Q&A、展示 dashboard 或补充数据来源。
 
 ## 3. 时间分配
 
@@ -38,10 +35,11 @@
 | 0:00-1:00 | 开场、研究问题、结论预告 | Speaker 1 |
 | 1:00-3:00 | 公司概况与为什么选择 LULU | Speaker 1 |
 | 3:00-5:00 | 行业与历史基本面 | Speaker 1 |
-| 5:00-7:00 | Valuation story: 从 hyper-growth 到 mature premium retail | Speaker 2 |
-| 7:00-10:00 | DCF 方法与 base case 结果 | Speaker 2 |
-| 10:00-12:30 | Bear/base/bull 和 sensitivity | Speaker 2 或 3 |
-| 12:30-14:00 | Market price gap: 市场可能隐含什么悲观故事 | Speaker 3 |
+| 5:00-6:30 | Valuation story: 从 hyper-growth 到 mature premium retail | Speaker 2 |
+| 6:30-8:30 | DCF/NPV 方法与 WACC/CAPM 口径 | Speaker 2 |
+| 8:30-10:00 | Base case 估值结果 | Speaker 2 |
+| 10:00-12:00 | Bear/base/bull、sensitivity 和 market-implied stress | Speaker 3 |
+| 12:00-14:00 | Market price gap: 市场可能隐含什么悲观故事 | Speaker 3 |
 | 14:00-15:00 | 结论、局限性、可复现性 | Speaker 3 |
 
 每位主讲人应提前练习。如果用英文演讲，目标语速约为每分钟 120-140 个英文单词；如果用中文演讲，也要避免临场自由发挥过多。无论使用中文还是英文演讲，slides 一律用英文，关键估值术语保留英文。
@@ -59,7 +57,7 @@
 | 5 | Industry Context | Activewear 长期趋势 + 竞争和消费者周期风险 |
 | 6 | Historical Fundamentals | Revenue growth slowing, margin pressure, inventory increase |
 | 7 | Our Valuation Story | Mature-growth transition：Americas stabilizes, international expands, margins partially recover |
-| 8 | DCF Method | FCFF 公式、10-year forecast、terminal value、equity bridge |
+| 8 | DCF, NPV, and WACC Method | FCFF 公式、NPV 折现逻辑、scenario-calibrated WACC、CAPM/WACC 课程口径、10-year forecast、terminal value、equity bridge |
 | 9 | Base Case Valuation | EV、equity value、fair value per share；用一张表或 waterfall |
 | 10 | Scenario Results | Bear $170.00 / Base $231.38 / Bull $385.63 |
 | 11 | Sensitivity And Stress Test | 普通 sensitivity 仍高于市价；接近市价需要更悲观假设 |
@@ -105,6 +103,12 @@
 - 对数字的解释，而不是只报数字。
 - 对不确定性的承认，尤其是 market price gap 部分。
 - 结尾一句 transition，把话题交给下一位同学。
+
+三位 speaker 的稿件边界应保持清楚：
+
+- Speaker 1 不需要提前讲 fair value，只需要把公司、行业和历史问题讲到位，为估值故事铺垫。
+- Speaker 2 负责方法与 base case，必须解释 FCFF、NPV、terminal value、WACC，并说明 WACC 是课程框架下的情景校准折现率。
+- Speaker 3 负责把不确定性讲清楚，尤其是 scenario analysis、sensitivity analysis、market-implied stress 和 valuation gap。
 
 不要写成：
 
@@ -161,6 +165,7 @@ PPT 中可以简化，但不能改变结论。
 - 为什么选择 LULU。
 - 从 business story 到 assumptions 的逻辑。
 - FCFF DCF 的基本方法。
+- WACC/CAPM 在报告中的使用口径，以及完整 beta-based WACC 尚未完成这一 limitation。
 - Base case fair value 和 market price 对比。
 - Scenario/sensitivity 证明结论对假设敏感。
 - 对 market price gap 的谨慎解释。
@@ -174,7 +179,9 @@ PPT 提交或演示前，主讲同学需要完成：
 - [ ] 每页不超过 3 个主要信息点。
 - [ ] 所有数字与 report 和 Excel 一致。
 - [ ] 15 分钟内完整讲完，最好控制在 14 分 30 秒左右。
+- [ ] 3 位 speaker 分工已固定，且每个人只讲自己负责的内容边界。
 - [ ] 每位 speaker 的开头和结尾衔接自然。
+- [ ] WACC/CAPM 简化口径与 report 保持一致，没有讲成完整市场校准。
 - [ ] 结论没有说得过度绝对。
 - [ ] 准备好回答 “为什么市场价比你们模型低这么多？”。
 - [ ] 准备好回答 “AI 在项目中具体做了什么？”。
