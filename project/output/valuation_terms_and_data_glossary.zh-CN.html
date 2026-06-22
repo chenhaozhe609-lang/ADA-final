@@ -1,0 +1,672 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>LULU Valuation Terms and Data Glossary</title>
+  <style>
+    :root {
+      --paper: oklch(98.5% 0.006 82);
+      --surface: oklch(99.2% 0.004 82);
+      --ink: oklch(21% 0.025 255);
+      --muted: oklch(45% 0.025 255);
+      --line: oklch(88% 0.018 255);
+      --soft: oklch(96% 0.012 255);
+      --deep: oklch(28% 0.07 255);
+      --accent: oklch(45% 0.13 24);
+      --sage: oklch(46% 0.075 150);
+      --amber: oklch(62% 0.105 75);
+    }
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(180deg, oklch(97.5% 0.012 78), var(--paper) 260px),
+        var(--paper);
+      font-family: "Segoe UI", "Microsoft YaHei", Arial, sans-serif;
+      line-height: 1.62;
+    }
+    main {
+      max-width: 1180px;
+      margin: 0 auto;
+      padding: 48px 34px 70px;
+    }
+    header {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 260px;
+      gap: 28px;
+      align-items: end;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 26px;
+      margin-bottom: 26px;
+    }
+    .eyebrow {
+      margin: 0 0 8px;
+      color: var(--accent);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    h1 {
+      margin: 0;
+      color: var(--deep);
+      font-size: 38px;
+      line-height: 1.18;
+    }
+    .subtitle {
+      max-width: 900px;
+      margin: 14px 0 0;
+      color: var(--muted);
+      font-size: 16px;
+    }
+    .focus-box {
+      border: 1px solid var(--line);
+      background: var(--surface);
+      padding: 16px 18px;
+      box-shadow: 0 14px 34px oklch(24% 0.04 255 / 0.08);
+    }
+    .focus-box strong {
+      display: block;
+      color: var(--deep);
+      font-size: 13px;
+      letter-spacing: .05em;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .focus-box p {
+      margin: 0;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    .summary {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 10px;
+      margin: 26px 0 34px;
+    }
+    .kpi {
+      border: 1px solid var(--line);
+      padding: 14px 15px;
+      background: var(--surface);
+      box-shadow: 0 8px 18px oklch(24% 0.04 255 / 0.045);
+    }
+    .kpi strong {
+      display: block;
+      color: var(--deep);
+      font-size: 15px;
+    }
+    .kpi span {
+      display: block;
+      color: var(--muted);
+      font-size: 13px;
+      margin-top: 2px;
+    }
+    h2 {
+      margin: 34px 0 12px;
+      color: var(--deep);
+      font-size: 23px;
+      border-bottom: 1px solid var(--line);
+      padding-bottom: 8px;
+    }
+    h3 {
+      margin: 24px 0 10px;
+      color: var(--deep);
+      font-size: 18px;
+    }
+    p.note {
+      margin: 0 0 14px;
+      color: var(--muted);
+      font-size: 14px;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 12px 0 26px;
+      table-layout: fixed;
+      font-size: 14px;
+      background: var(--surface);
+      box-shadow: 0 10px 24px oklch(24% 0.04 255 / 0.04);
+    }
+    th {
+      background: var(--deep);
+      color: oklch(98% 0.006 82);
+      text-align: left;
+      padding: 11px 12px;
+      border: 1px solid var(--deep);
+      font-weight: 700;
+      vertical-align: top;
+    }
+    td {
+      padding: 11px 12px;
+      border: 1px solid var(--line);
+      vertical-align: top;
+    }
+    tbody tr:nth-child(even) td { background: oklch(97.8% 0.006 255); }
+    .term {
+      color: var(--deep);
+      font-weight: 700;
+    }
+    .abbr {
+      display: inline-block;
+      min-width: 54px;
+      color: var(--accent);
+      font-weight: 800;
+    }
+    code {
+      background: oklch(95.5% 0.012 255);
+      border: 1px solid var(--line);
+      border-radius: 4px;
+      padding: 1px 5px;
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: 12px;
+    }
+    .formula {
+      background: var(--surface);
+      border: 1px solid var(--line);
+      padding: 11px 13px;
+      margin: 9px 0 12px;
+      font-family: "Cascadia Mono", Consolas, monospace;
+      font-size: 13px;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+    .tag {
+      display: inline-block;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      padding: 2px 8px;
+      color: var(--muted);
+      background: var(--surface);
+      font-size: 12px;
+      margin-right: 5px;
+    }
+    .callout {
+      border: 1px solid var(--line);
+      background: linear-gradient(180deg, oklch(98% 0.012 150), var(--surface));
+      padding: 16px 18px;
+      margin: 14px 0 16px;
+      box-shadow: 0 10px 24px oklch(24% 0.04 255 / 0.04);
+    }
+    .callout strong { color: var(--sage); }
+    footer {
+      color: var(--muted);
+      border-top: 1px solid var(--line);
+      margin-top: 38px;
+      padding-top: 14px;
+      font-size: 12px;
+    }
+    @media print {
+      main { max-width: none; padding: 24px; }
+      .summary { grid-template-columns: repeat(4, 1fr); }
+      table { page-break-inside: avoid; }
+    }
+    @media (max-width: 780px) {
+      main { padding: 28px 16px 42px; }
+      header { grid-template-columns: 1fr; }
+      h1 { font-size: 27px; }
+      .summary { grid-template-columns: 1fr 1fr; }
+      table { font-size: 13px; }
+    }
+  </style>
+</head>
+<body>
+<main>
+  <header>
+    <div>
+      <p class="eyebrow">ADA Final Project · LULU Valuation</p>
+      <h1>估值术语与数据类型复盘表</h1>
+      <p class="subtitle">个人复习用：把报告、模型和 Q&amp;A 中反复出现的英文术语、中文含义、估值角色和数据来源放在同一张表里。复盘时先记英文术语，再用中文解释它在估值链条里的作用。</p>
+    </div>
+    <aside class="focus-box">
+      <strong>复盘重点</strong>
+      <p>先记住 DCF 的现金流链条，再记住 WACC 的来源，最后用 scenario 和 stress test 解释 market price gap。</p>
+    </aside>
+  </header>
+
+  <section class="summary" aria-label="Key valuation summary">
+    <div class="kpi"><strong>Valuation Date</strong><span>June 15, 2026</span></div>
+    <div class="kpi"><strong>Market Price</strong><span>$116.21 / share</span></div>
+    <div class="kpi"><strong>Base Fair Value</strong><span>$231.38 / share</span></div>
+    <div class="kpi"><strong>Main Method</strong><span>FCFF DCF + Scenario Analysis</span></div>
+  </section>
+
+  <section>
+    <h2>一、核心估值术语</h2>
+    <p class="note">这一部分优先背熟。常见问题是：如何从 business story 走到 fair value。</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 13%">缩写 / 术语</th>
+          <th style="width: 22%">英文全称</th>
+          <th style="width: 15%">中文名</th>
+          <th style="width: 25%">中文含义</th>
+          <th style="width: 25%">在本估值中的作用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="abbr">DCF</span></td>
+          <td>Discounted Cash Flow</td>
+          <td>现金流折现法</td>
+          <td>把未来预期现金流折现回估值日，得到企业内在价值。</td>
+          <td>本项目主估值方法。模型预测 LULU 未来 10 年 FCFF，加上 terminal value，再折现得到 enterprise value。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">FCFF</span></td>
+          <td>Free Cash Flow to the Firm</td>
+          <td>企业自由现金流</td>
+          <td>公司经营产生、扣除再投资后，可分配给所有资本提供者的现金流。</td>
+          <td>DCF 的核心现金流。模型用 <code>FCFF = NOPAT - Reinvestment</code> 预测每年现金流。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">NPV</span></td>
+          <td>Net Present Value</td>
+          <td>净现值</td>
+          <td>未来现金流折现值减去投入成本。企业估值中常体现为未来现金流现值之和。</td>
+          <td>DCF 的底层逻辑：价值来自未来现金流的 present value。本项目没有另做一个 NPV 表，而是在 DCF 中应用 NPV 思路。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">WACC</span></td>
+          <td>Weighted Average Cost of Capital</td>
+          <td>加权平均资本成本</td>
+          <td>综合股权资本和债务资本成本后的折现率，反映投资者要求的风险回报。</td>
+          <td>用于折现 FCFF。Base case starting WACC 为 9.25%，terminal WACC 为 8.25%，并用 CAPM/WACC sanity check 支持。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">CAPM</span></td>
+          <td>Capital Asset Pricing Model</td>
+          <td>资本资产定价模型</td>
+          <td>用 risk-free rate、beta 和 equity risk premium 估计 cost of equity。</td>
+          <td>用于解释 WACC 来源。CAPM bridge 验证 9.25% starting WACC 不是凭空假设。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">ERP</span></td>
+          <td>Equity Risk Premium</td>
+          <td>股权风险溢价</td>
+          <td>投资股票相对于无风险资产所要求的额外回报。</td>
+          <td>CAPM 中计算 cost of equity 的关键输入。Base WACC check 使用 4.70% ERP。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Risk-free Rate</span></td>
+          <td>Risk-free Rate</td>
+          <td>无风险利率</td>
+          <td>理论上无违约风险资产的收益率，通常用长期美国国债收益率近似。</td>
+          <td>WACC sanity check 的起点。模型使用估值日附近 10-year U.S. Treasury yield，具体为 4.47%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Beta</span></td>
+          <td>Equity Beta</td>
+          <td>股权贝塔</td>
+          <td>股票相对整体市场的系统性风险敏感度。</td>
+          <td>CAPM 输入。Bear/Base/Bull 用不同 beta 体现不同风险情景，例如 Base 为 1.05。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Cost of Equity</span></td>
+          <td>Cost of Equity</td>
+          <td>股权资本成本</td>
+          <td>股东要求的预期回报率。</td>
+          <td>WACC 的股权部分。Base sanity check 的 cost of equity 为 9.71%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Cost of Debt</span></td>
+          <td>Cost of Debt</td>
+          <td>债务资本成本</td>
+          <td>公司借入债务或类债务融资需要支付的资本成本。</td>
+          <td>LULU 传统金融债较少，因此我们用 operating lease liabilities 作为 debt-like financing，并估算 after-tax debt cost。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">EBIT</span></td>
+          <td>Earnings Before Interest and Taxes</td>
+          <td>息税前利润</td>
+          <td>不考虑利息和所得税前的经营利润。</td>
+          <td>由 <code>Revenue × Operating Margin</code> 得到，是计算 NOPAT 的前一步。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">NOPAT</span></td>
+          <td>Net Operating Profit After Tax</td>
+          <td>税后经营利润</td>
+          <td>经营利润扣税后的结果，不受融资结构影响。</td>
+          <td>FCFF 的基础。模型使用 <code>NOPAT = EBIT × (1 - Tax Rate)</code>。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Reinvestment</span></td>
+          <td>Reinvestment</td>
+          <td>再投资</td>
+          <td>为了支持收入增长，需要投入到门店、库存、供应链、技术和营运资本中的资金。</td>
+          <td>从 NOPAT 中扣除，得到 FCFF。我们用 sales-to-capital approach 估算。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Sales-to-Capital</span></td>
+          <td>Sales-to-Capital Ratio</td>
+          <td>销售资本比</td>
+          <td>每一单位投入资本可以支持多少收入。</td>
+          <td>估算再投资效率。Base case 为 2.3，数值越高表示增长越省资本。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Terminal Value</span></td>
+          <td>Terminal Value</td>
+          <td>终值</td>
+          <td>显性预测期结束后，企业长期现金流价值的估计。</td>
+          <td>DCF 中很大一部分价值来自 terminal value。Base case terminal growth 为 2.0%，terminal WACC 为 8.25%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Terminal Growth</span></td>
+          <td>Terminal Growth Rate</td>
+          <td>永续增长率</td>
+          <td>预测期后公司长期稳定增长速度。</td>
+          <td>用于计算 terminal value。Base case 设 2.0%，对应 mature premium retailer，而不是 hyper-growth company。</td>
+        </tr>
+        <tr>
+          <td><span class="abbr">EV</span></td>
+          <td>Enterprise Value</td>
+          <td>企业价值</td>
+          <td>公司经营资产对所有资本提供者的价值。</td>
+          <td>DCF 首先得到 EV，再通过 equity bridge 转换为 equity value。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Equity Value</span></td>
+          <td>Equity Value</td>
+          <td>股权价值</td>
+          <td>归属于普通股股东的价值。</td>
+          <td>由 <code>EV + Cash - Debt-like Lease Liabilities</code> 得到，再除以 diluted shares 得到每股价值。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Fair Value</span></td>
+          <td>Fair Value per Share</td>
+          <td>每股公允价值 / 内在价值</td>
+          <td>模型估计的一股股票内在价值。</td>
+          <td>Base case fair value 为 $231.38，用来和 $116.21 market price 比较。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Market Price</span></td>
+          <td>Market Price</td>
+          <td>市场价格</td>
+          <td>估值日股票在市场上的观察价格。</td>
+          <td>使用 June 15, 2026 的 $116.21，与 DCF fair value 对比以讨论 valuation gap。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>二、分析与展示术语</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 18%">术语</th>
+          <th style="width: 24%">英文全称</th>
+          <th style="width: 18%">中文名</th>
+          <th style="width: 20%">中文含义</th>
+          <th style="width: 20%">在本估值中的作用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="term">Scenario Analysis</span></td>
+          <td>Scenario Analysis</td>
+          <td>情景分析</td>
+          <td>用不同假设组合观察估值结果变化。</td>
+          <td>模型设 Bear/Base/Bull 三种情景，对应不同增长、margin、WACC 和 terminal growth。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Sensitivity Analysis</span></td>
+          <td>Sensitivity Analysis</td>
+          <td>敏感性分析</td>
+          <td>改变关键变量，观察结果对假设的敏感程度。</td>
+          <td>测试 terminal WACC vs terminal growth，以及 revenue growth vs target margin。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Market-implied Stress Test</span></td>
+          <td>Market-implied Stress Test</td>
+          <td>市场隐含压力测试</td>
+          <td>反推什么悲观假设能让模型价值接近市场价。</td>
+          <td>用于解释 $116.21 市价可能隐含更低增长、更低 margin、更高 WACC 的故事。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Business Story</span></td>
+          <td>Business Story</td>
+          <td>商业故事 / 估值叙事</td>
+          <td>对公司未来经营逻辑的判断。</td>
+          <td>本项目核心故事是 LULU 从 hyper-growth brand 过渡到 mature premium retailer。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Mature Premium Retailer</span></td>
+          <td>Mature Premium Retailer</td>
+          <td>成熟高端零售商</td>
+          <td>增长放缓但仍有品牌溢价、较高利润率和稳定现金流的零售公司。</td>
+          <td>决定我们不再假设高速增长，而是假设温和增长、margin 稳定和较成熟的 terminal growth。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Valuation Gap</span></td>
+          <td>Valuation Gap</td>
+          <td>估值差距</td>
+          <td>模型内在价值和市场价格之间的差额。</td>
+          <td>本项目最重要讨论点：$231.38 fair value vs $116.21 market price。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Equity Bridge</span></td>
+          <td>Enterprise-to-Equity Bridge</td>
+          <td>企业价值到股权价值桥</td>
+          <td>从 EV 转换为普通股股东价值的步骤。</td>
+          <td>我们加 cash、减 debt-like lease liabilities，再除以 diluted shares。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>三、常用财务指标术语</h2>
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 16%">术语</th>
+          <th style="width: 22%">英文全称</th>
+          <th style="width: 16%">中文名</th>
+          <th style="width: 23%">中文含义</th>
+          <th style="width: 23%">在本估值中的作用</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><span class="term">Revenue</span></td>
+          <td>Revenue / Net Revenue</td>
+          <td>收入 / 净收入</td>
+          <td>公司销售商品和服务产生的收入。</td>
+          <td>DCF 的起点。FY2025 revenue 为 $11.10B。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Revenue Growth</span></td>
+          <td>Revenue Growth Rate</td>
+          <td>收入增长率</td>
+          <td>收入相对上一期增长的比例。</td>
+          <td>决定未来 revenue forecast；base case 从 2.5% 到 5.5% 再回落到 2.75%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Gross Margin</span></td>
+          <td>Gross Margin</td>
+          <td>毛利率</td>
+          <td>毛利占收入的比例，反映产品定价力和成本控制。</td>
+          <td>用于支持 LULU 仍有 premium brand economics；FY2025 gross margin 为 56.6%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Operating Margin</span></td>
+          <td>Operating Margin</td>
+          <td>营业利润率</td>
+          <td>营业利润占收入的比例。</td>
+          <td>直接影响 EBIT 和 NOPAT。FY2025 为 19.9%，base target 为 20.0%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Tax Rate</span></td>
+          <td>Effective / Assumed Tax Rate</td>
+          <td>税率</td>
+          <td>税费占税前利润的比例，模型中用于计算税后经营利润。</td>
+          <td>Base/Bear 采用 25%，Bull 采用 24%。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Inventory Intensity</span></td>
+          <td>Inventory-to-Revenue Ratio</td>
+          <td>库存收入比</td>
+          <td>库存占收入的比例，反映库存压力和潜在 markdown risk。</td>
+          <td>用于支持商业故事中的 margin pressure 和 working capital risk。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Diluted Shares</span></td>
+          <td>Diluted Shares Outstanding</td>
+          <td>稀释后流通股数</td>
+          <td>考虑潜在稀释后的股份数量。</td>
+          <td>用于把 equity value 转成 fair value per share。模型使用 119.1M。</td>
+        </tr>
+        <tr>
+          <td><span class="term">Operating Lease Liabilities</span></td>
+          <td>Operating Lease Liabilities</td>
+          <td>经营租赁负债</td>
+          <td>公司因租赁门店等形成的未来付款义务。</td>
+          <td>在 equity bridge 中作为 debt-like liabilities 扣除，并在 WACC build 中作为 debt-like financing。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>四、模型公式链</h2>
+    <p class="note">不用逐字背公式，但要知道每个输出从哪里来。</p>
+    <div class="formula">EBIT = Revenue × Operating Margin</div>
+    <div class="formula">NOPAT = EBIT × (1 - Tax Rate)</div>
+    <div class="formula">Reinvestment = (Revenue_t - Revenue_{t-1}) / Sales-to-Capital</div>
+    <div class="formula">FCFF = NOPAT - Reinvestment</div>
+    <div class="formula">Terminal Value = FCFF_10 × (1 + g) / (Terminal WACC - g)</div>
+    <div class="formula">Enterprise Value = PV(Explicit FCFF) + PV(Terminal Value)</div>
+    <div class="formula">Equity Value = Enterprise Value + Cash - Debt-like Lease Liabilities</div>
+    <div class="formula">Fair Value per Share = Equity Value / Diluted Shares Outstanding</div>
+    <div class="formula">Cost of Equity = Risk-free Rate + Beta × Equity Risk Premium + Company-specific Risk Premium</div>
+    <div class="formula">WACC = E/(D+E) × Cost of Equity + D/(D+E) × After-tax Cost of Debt</div>
+  </section>
+
+  <section>
+    <h2>五、使用到的数据类型</h2>
+    <p class="note">这里按“数据从哪里来、被加工成什么、在模型中做什么”整理。</p>
+
+    <table>
+      <thead>
+        <tr>
+          <th style="width: 18%">数据类型</th>
+          <th style="width: 23%">主要文件 / 来源</th>
+          <th style="width: 22%">包含内容</th>
+          <th style="width: 20%">在估值中的作用</th>
+          <th style="width: 17%">注意事项</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>原始 SEC 数据</strong><br><span class="tag">Raw SEC Data</span></td>
+          <td><code>raw/sec/lulu_submissions.json</code><br><code>raw/sec/lulu_companyfacts.json</code><br><code>raw/sec/filings/*.htm</code></td>
+          <td>SEC submissions metadata、XBRL company facts、10-K/10-Q HTML filings。</td>
+          <td>作为所有财务数据和经营披露的原始来源，支撑可复现性。</td>
+          <td>原始数据需要清洗，部分经营表格不是标准 XBRL。</td>
+        </tr>
+        <tr>
+          <td><strong>年度财务数据</strong><br><span class="tag">Historical Financials</span></td>
+          <td><code>processed/lulu_annual_curated.csv</code></td>
+          <td>Revenue、gross profit、operating income、net income、tax、cash、inventory、shares、lease liabilities。</td>
+          <td>DCF 起点；用于 FY2025 revenue、operating margin、cash、shares 和 lease liabilities。</td>
+          <td>这是当前最佳模型输入，优先于 first-pass annual facts。</td>
+        </tr>
+        <tr>
+          <td><strong>经营指标数据</strong><br><span class="tag">Operating Metrics</span></td>
+          <td><code>processed/lulu_operating_metrics.csv</code></td>
+          <td>Store count、geographic revenue、product revenue、comparable sales、market growth。</td>
+          <td>支持 business story：Americas pressure、China Mainland 和 Rest of World growth、产品结构。</td>
+          <td>经营表格需要人工核对 filing 原文。</td>
+        </tr>
+        <tr>
+          <td><strong>历史比率数据</strong><br><span class="tag">Historical Ratios</span></td>
+          <td><code>processed/lulu_historical_ratios.csv</code></td>
+          <td>Revenue growth、gross margin、operating margin、tax rate、inventory-to-revenue、sales-to-capital、ROIC proxy。</td>
+          <td>帮助设定未来 assumptions，并解释为什么不直接沿用高增长历史。</td>
+          <td>比率是模型加工结果，不是原始披露。</td>
+        </tr>
+        <tr>
+          <td><strong>模型假设数据</strong><br><span class="tag">Assumptions</span></td>
+          <td><code>processed/lulu_valuation_assumptions.csv</code></td>
+          <td>Bear/Base/Bull 的 revenue growth、target margin、sales-to-capital、WACC、terminal growth、tax rate。</td>
+          <td>把 business story 转换成 DCF 数字假设。</td>
+          <td>这是最需要解释清楚的数据类型。</td>
+        </tr>
+        <tr>
+          <td><strong>WACC 构建数据</strong><br><span class="tag">WACC Build</span></td>
+          <td><code>processed/lulu_wacc_build.csv</code></td>
+          <td>Risk-free rate、beta、ERP、company-specific risk premium、cost of equity、lease debt weight、approx. WACC。</td>
+          <td>为 9.25% starting WACC 提供 CAPM/WACC sanity check。</td>
+          <td>不是完整 peer-beta WACC model；定位是 sanity check。</td>
+        </tr>
+        <tr>
+          <td><strong>DCF 预测数据</strong><br><span class="tag">Forecast Outputs</span></td>
+          <td><code>processed/lulu_dcf_forecast.csv</code></td>
+          <td>10 年 revenue、EBIT、NOPAT、reinvestment、FCFF、WACC、discount factor、PV of FCFF。</td>
+          <td>展示未来现金流如何被预测并折现。</td>
+          <td>每行对应一个 scenario-year。</td>
+        </tr>
+        <tr>
+          <td><strong>情景估值输出</strong><br><span class="tag">Scenario Summary</span></td>
+          <td><code>processed/lulu_scenario_summary.csv</code></td>
+          <td>PV of FCFF、terminal value、enterprise value、equity value、fair value per share、market price gap。</td>
+          <td>给出 Bear/Base/Bull 三种 fair value，是报告核心结果。</td>
+          <td>Base = $231.38；Bear = $170.00；Bull = $385.63。</td>
+        </tr>
+        <tr>
+          <td><strong>敏感性分析数据</strong><br><span class="tag">Sensitivity Tables</span></td>
+          <td><code>processed/lulu_sensitivity_wacc_terminal_growth.csv</code><br><code>processed/lulu_sensitivity_growth_margin.csv</code></td>
+          <td>不同 WACC、terminal growth、growth、margin 组合下的 fair value。</td>
+          <td>说明估值对关键假设敏感，避免只依赖单点估值。</td>
+          <td>适合用 heatmap 或简表快速检查估值是否稳健。</td>
+        </tr>
+        <tr>
+          <td><strong>市场隐含压力测试</strong><br><span class="tag">Market-implied Stress</span></td>
+          <td><code>processed/lulu_market_implied_stress.csv</code><br><code>processed/lulu_sensitivity_market_breakeven.csv</code></td>
+          <td>接近 $116.21 市价所需的悲观假设组合。</td>
+          <td>解释市场可能在 pricing 更差的 future story。</td>
+          <td>用于回答“为什么市场价低这么多”。</td>
+        </tr>
+        <tr>
+          <td><strong>市场价格数据</strong><br><span class="tag">Market Price</span></td>
+          <td>MarketWatch close on June 15, 2026</td>
+          <td>LULU 估值日收盘价 $116.21。</td>
+          <td>作为 fair value comparison 的市场基准。</td>
+          <td>必须和 valuation date 一起说明。</td>
+        </tr>
+        <tr>
+          <td><strong>Excel / 展示数据</strong><br><span class="tag">Workbook & Dashboard</span></td>
+          <td><code>output/lulu_valuation_model.xlsx</code><br><code>output/lulu_valuation_model_beautified.xlsx</code><br><code>project/code/web/dashboard-data.js</code></td>
+          <td>模型输出、可审计表格、dashboard 使用的数据。</td>
+          <td>替代传统 Excel 手工模型，帮助复现、检查和展示。</td>
+          <td>Excel 和网页是辅助材料，核心逻辑仍要能口头解释。</td>
+        </tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section>
+    <h2>六、Q&amp;A 快速口径</h2>
+    <div class="callout">
+      <strong>如果被问“到底做了什么估值？”</strong><br>
+      我们使用 FCFF DCF。先把 LULU 从 hyper-growth brand 到 mature premium retailer 的 business story 转换成增长、margin、reinvestment、WACC 和 terminal growth 假设，再预测 10 年 FCFF，折现得到 enterprise value，最后通过 equity bridge 得到每股 fair value。
+    </div>
+    <div class="callout">
+      <strong>如果被问“9.25% WACC 怎么来的？”</strong><br>
+      9.25% 是 scenario-calibrated starting WACC，并用 CAPM/WACC sanity check 支持。我们用 4.47% 的 10-year Treasury yield 作为 risk-free rate，加上 beta、ERP 和小幅 company-specific risk adjustment，再把 operating lease liabilities 当作 debt-like financing。Base sanity-check WACC 约 9.11%，与模型 9.25% 接近。
+    </div>
+    <div class="callout">
+      <strong>如果被问“市场价低这么多，是不是市场错了？”</strong><br>
+      不应说市场一定错。正确说法是：我们的 base story 和市场隐含 story 不同。市场可能认为 Americas weakness 是结构性的、margin 会更低、international growth 不足以抵消压力，或者需要更高 risk premium。
+    </div>
+  </section>
+
+  <footer>
+    Personal review sheet for the LULU valuation project. Key numbers should remain consistent with the latest report and model workbook.
+  </footer>
+</main>
+</body>
+</html>
