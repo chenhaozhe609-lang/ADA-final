@@ -13,6 +13,7 @@ Outputs:
 - project/data/processed/lulu_historical_ratios.csv
 - project/data/processed/lulu_dcf_forecast.csv
 - project/data/processed/lulu_scenario_summary.csv
+- project/data/processed/lulu_wacc_build.csv
 - project/data/processed/lulu_valuation_model.json
 - project/output/lulu_valuation_model.xlsx
 """
@@ -36,6 +37,12 @@ VALUATION_DATE = "2026-06-15"
 MARKET_PRICE = 116.21
 MARKET_PRICE_NOTE = "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
 MODEL_VERSION = "calibrated_mature_growth"
+RISK_FREE_RATE = 0.0447
+RISK_FREE_RATE_NOTE = "FRED DGS10 reported the 10-year U.S. Treasury constant maturity yield at 4.47% on 2026-06-15."
+WACC_SOURCE_NOTE = (
+    "CAPM/WACC sanity check: risk-free rate from FRED DGS10; ERP and apparel beta benchmark from "
+    "Damodaran data; operating lease liabilities treated as debt-like financing."
+)
 
 
 @dataclass(frozen=True)
@@ -96,6 +103,30 @@ SCENARIOS = [
 ]
 
 SCENARIO_BY_NAME = {scenario.name: scenario for scenario in SCENARIOS}
+
+WACC_INPUTS = {
+    "Bear": {
+        "beta": 1.20,
+        "equity_risk_premium": 0.050,
+        "company_specific_risk_premium": 0.005,
+        "pre_tax_cost_of_debt": 0.064,
+        "source_note": "Higher risk case reflecting persistent Americas weakness, margin pressure, and execution risk.",
+    },
+    "Base": {
+        "beta": 1.05,
+        "equity_risk_premium": 0.047,
+        "company_specific_risk_premium": 0.003,
+        "pre_tax_cost_of_debt": 0.060,
+        "source_note": "Base case cross-check for the model's 9.25% starting WACC.",
+    },
+    "Bull": {
+        "beta": 0.95,
+        "equity_risk_premium": 0.045,
+        "company_specific_risk_premium": 0.000,
+        "pre_tax_cost_of_debt": 0.056,
+        "source_note": "Lower risk case reflecting stronger brand stabilization and execution.",
+    },
+}
 
 
 def write_csv(path: Path, rows: list[dict], fieldnames: list[str]) -> None:
@@ -236,6 +267,53 @@ def value_scenario(
     return rows, summary
 
 
+def build_wacc_bridge(
+    scenarios: list[Scenario],
+    market_price: float,
+    shares: float,
+    lease_liabilities: float,
+) -> pd.DataFrame:
+    market_value_of_equity = market_price * shares
+    debt_like_claims = lease_liabilities
+    total_capital = market_value_of_equity + debt_like_claims
+    equity_weight = market_value_of_equity / total_capital if total_capital else 0
+    debt_weight = debt_like_claims / total_capital if total_capital else 0
+
+    rows = []
+    for scenario in scenarios:
+        inputs = WACC_INPUTS[scenario.name]
+        cost_of_equity = (
+            RISK_FREE_RATE
+            + inputs["beta"] * inputs["equity_risk_premium"]
+            + inputs["company_specific_risk_premium"]
+        )
+        after_tax_cost_of_debt = inputs["pre_tax_cost_of_debt"] * (1 - scenario.tax_rate)
+        approx_wacc = equity_weight * cost_of_equity + debt_weight * after_tax_cost_of_debt
+        rows.append(
+            {
+                "scenario": scenario.name,
+                "risk_free_rate": RISK_FREE_RATE,
+                "beta": inputs["beta"],
+                "equity_risk_premium": inputs["equity_risk_premium"],
+                "company_specific_risk_premium": inputs["company_specific_risk_premium"],
+                "cost_of_equity": cost_of_equity,
+                "market_value_of_equity": market_value_of_equity,
+                "debt_like_lease_liabilities": debt_like_claims,
+                "equity_weight": equity_weight,
+                "debt_weight": debt_weight,
+                "pre_tax_cost_of_debt": inputs["pre_tax_cost_of_debt"],
+                "tax_rate": scenario.tax_rate,
+                "after_tax_cost_of_debt": after_tax_cost_of_debt,
+                "approx_wacc": approx_wacc,
+                "model_wacc_start": scenario.wacc_start,
+                "difference": scenario.wacc_start - approx_wacc,
+                "source_note": inputs["source_note"],
+                "general_source_note": WACC_SOURCE_NOTE,
+            }
+        )
+    return pd.DataFrame(rows)
+
+
 def main() -> None:
     OUTPUT_DIR.mkdir(parents=True, exist_ok=True)
     financials = load_financials()
@@ -279,17 +357,22 @@ def main() -> None:
     assumptions = pd.DataFrame([asdict(scenario) for scenario in SCENARIOS])
     forecast = pd.DataFrame(forecast_rows)
     summary = pd.DataFrame(summary_rows)
+    wacc_build = build_wacc_bridge(SCENARIOS, MARKET_PRICE, shares, lease_liabilities)
 
     historical_output.to_csv(DATA_DIR / "lulu_historical_ratios.csv", index=False)
     forecast.to_csv(DATA_DIR / "lulu_dcf_forecast.csv", index=False)
     summary.to_csv(DATA_DIR / "lulu_scenario_summary.csv", index=False)
     assumptions.to_csv(DATA_DIR / "lulu_valuation_assumptions.csv", index=False)
+    wacc_build.to_csv(DATA_DIR / "lulu_wacc_build.csv", index=False)
 
     model_json = {
         "model_version": MODEL_VERSION,
         "valuation_date": VALUATION_DATE,
         "market_price": MARKET_PRICE,
         "market_price_note": MARKET_PRICE_NOTE,
+        "risk_free_rate": RISK_FREE_RATE,
+        "risk_free_rate_note": RISK_FREE_RATE_NOTE,
+        "wacc_source_note": WACC_SOURCE_NOTE,
         "base_period_end": str(latest["period_end"]),
         "source_files": [
             "project/data/processed/lulu_annual_curated.csv",
@@ -297,12 +380,14 @@ def main() -> None:
         ],
         "assumptions": [asdict(scenario) for scenario in SCENARIOS],
         "scenario_summary": summary_rows,
+        "wacc_build": wacc_build.to_dict(orient="records"),
     }
     (DATA_DIR / "lulu_valuation_model.json").write_text(json.dumps(model_json, indent=2), encoding="utf-8")
 
     workbook_path = OUTPUT_DIR / "lulu_valuation_model.xlsx"
     with pd.ExcelWriter(workbook_path, engine="openpyxl") as writer:
         assumptions.to_excel(writer, sheet_name="Assumptions", index=False)
+        wacc_build.to_excel(writer, sheet_name="WACC Build", index=False)
         historical_output.to_excel(writer, sheet_name="Historical ratios", index=False)
         forecast.to_excel(writer, sheet_name="DCF forecast", index=False)
         summary.to_excel(writer, sheet_name="Scenario summary", index=False)
@@ -310,6 +395,7 @@ def main() -> None:
     print(f"Wrote {DATA_DIR / 'lulu_historical_ratios.csv'}")
     print(f"Wrote {DATA_DIR / 'lulu_dcf_forecast.csv'}")
     print(f"Wrote {DATA_DIR / 'lulu_scenario_summary.csv'}")
+    print(f"Wrote {DATA_DIR / 'lulu_wacc_build.csv'}")
     print(f"Wrote {workbook_path}")
 
 

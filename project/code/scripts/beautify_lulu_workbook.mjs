@@ -110,9 +110,10 @@ async function buildCover(workbook) {
   sheet.getRange("A4:A12").format = { fill: lightGray, font: { bold: true } };
   sheet.getRange("B6:B7").format = { fill: paleRed, font: { bold: true, color: red } };
 
-  sheet.getRange("D4:H10").values = [
+  sheet.getRange("D4:H11").values = [
     ["Workbook navigation", "", "", "", ""],
     ["Assumptions", "Bear/base/bull DCF drivers", "", "", ""],
+    ["WACC Build", "CAPM/WACC sanity check for scenario discount rates", "", "", ""],
     ["Historical ratios", "Historical growth, margin, inventory, ROIC proxy", "", "", ""],
     ["DCF forecast", "Ten-year scenario forecast and FCFF", "", "", ""],
     ["Scenario summary", "Enterprise value, equity value, and per-share value", "", "", ""],
@@ -121,9 +122,9 @@ async function buildCover(workbook) {
   ];
   sheet.getRange("D4:H4").merge();
   styleHeaderRow(sheet, "D4:H4");
-  styleBlock(sheet, "D5:H10");
-  sheet.getRange("D5:D10").format = { font: { bold: true } };
-  sheet.getRange("D5:H10").format.wrapText = true;
+  styleBlock(sheet, "D5:H11");
+  sheet.getRange("D5:D11").format = { font: { bold: true } };
+  sheet.getRange("D5:H11").format.wrapText = true;
 
   sheet.getRange("A15:H18").values = [
     ["Color convention", "", "", "", "", "", "", ""],
@@ -210,6 +211,18 @@ async function main() {
   formatExistingSheet(workbook, "Assumptions", 4, 11, "AssumptionsTbl", {
     A: 90, B: 100, C: 100, D: 100, E: 150, F: 110, G: 95, H: 105, I: 115, J: 80, K: 380,
   });
+  formatExistingSheet(workbook, "WACC Build", 4, 18, "WaccBuildTbl", {
+    A: 80, B: 115, C: 80, D: 130, E: 170, F: 125, G: 150, H: 165, I: 105, J: 95, K: 135, L: 85, M: 145, N: 115, O: 125, P: 105, Q: 260, R: 360,
+  });
+  try {
+    const wacc = workbook.worksheets.getItem("WACC Build");
+    wacc.getRange("B2:B4").format.numberFormat = "0.00%";
+    wacc.getRange("D2:F4").format.numberFormat = "0.00%";
+    wacc.getRange("I2:P4").format.numberFormat = "0.00%";
+    wacc.getRange("G2:H4").format.numberFormat = "$#,##0";
+    wacc.getRange("Q2:R4").format.wrapText = true;
+    wacc.getRange("A2:R4").format.rowHeightPx = 54;
+  } catch {}
   formatExistingSheet(workbook, "Historical ratios", 19, 16, "HistoricalRatiosTbl", {
     A: 110, B: 125, C: 115, D: 105, E: 120, F: 105, G: 120, H: 130, I: 125, J: 125, K: 130, L: 130, M: 140, N: 135, O: 115, P: 90,
   });
@@ -230,7 +243,7 @@ async function main() {
   formatExistingSheet(workbook, "Market breakeven", 3, 7, "MarketBreakevenTbl", { A: 220, B: 120, C: 160, D: 120, E: 120, F: 150, G: 155 });
   formatExistingSheet(workbook, "Market implied stress", 109, 9, "MarketStressTbl", { A: 110, B: 110, C: 145, D: 115, E: 115, F: 115, G: 120, H: 145, I: 155 });
 
-  for (const sheetName of ["Assumptions", "Historical ratios", "DCF forecast", "Scenario summary", "Sens WACC g", "Sens Growth Margin", "Market breakeven", "Market implied stress"]) {
+  for (const sheetName of ["Assumptions", "WACC Build", "Historical ratios", "DCF forecast", "Scenario summary", "Sens WACC g", "Sens Growth Margin", "Market breakeven", "Market implied stress"]) {
     try {
       const sheet = workbook.worksheets.getItem(sheetName);
       const used = sheet.getUsedRange();
@@ -246,7 +259,7 @@ async function main() {
   });
   console.log(errors.ndjson);
 
-  const previewSheets = ["Cover", "Scenario summary", "DCF forecast", "Checks", "Sources Audit"];
+  const previewSheets = ["Cover", "WACC Build", "Scenario summary", "DCF forecast", "Checks", "Sources Audit"];
   await fs.mkdir(path.join(baseDir, "output", "workbook_previews"), { recursive: true });
   for (const sheetName of previewSheets) {
     const preview = await workbook.render({ sheetName, autoCrop: "all", scale: 1, format: "png" });

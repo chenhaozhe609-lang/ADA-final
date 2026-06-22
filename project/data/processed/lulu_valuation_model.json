@@ -3,6 +3,9 @@
   "valuation_date": "2026-06-15",
   "market_price": 116.21,
   "market_price_note": "MarketWatch reported LULU closed at $116.21 on 2026-06-15.",
+  "risk_free_rate": 0.0447,
+  "risk_free_rate_note": "FRED DGS10 reported the 10-year U.S. Treasury constant maturity yield at 4.47% on 2026-06-15.",
+  "wacc_source_note": "CAPM/WACC sanity check: risk-free rate from FRED DGS10; ERP and apparel beta benchmark from Damodaran data; operating lease liabilities treated as debt-like financing.",
   "base_period_end": "2026-02-01",
   "source_files": [
     "project/data/processed/lulu_annual_curated.csv",
@@ -103,6 +106,68 @@
       "price_value_gap_pct": -0.6986469509552982,
       "valuation_date": "2026-06-15",
       "market_price_note": "MarketWatch reported LULU closed at $116.21 on 2026-06-15."
+    }
+  ],
+  "wacc_build": [
+    {
+      "scenario": "Bear",
+      "risk_free_rate": 0.0447,
+      "beta": 1.2,
+      "equity_risk_premium": 0.05,
+      "company_specific_risk_premium": 0.005,
+      "cost_of_equity": 0.10969999999999999,
+      "market_value_of_equity": 13836892280.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_weight": 0.8849758449152803,
+      "debt_weight": 0.11502415508471975,
+      "pre_tax_cost_of_debt": 0.064,
+      "tax_rate": 0.25,
+      "after_tax_cost_of_debt": 0.048,
+      "approx_wacc": 0.10260300963127278,
+      "model_wacc_start": 0.1,
+      "difference": -0.0026030096312727735,
+      "source_note": "Higher risk case reflecting persistent Americas weakness, margin pressure, and execution risk.",
+      "general_source_note": "CAPM/WACC sanity check: risk-free rate from FRED DGS10; ERP and apparel beta benchmark from Damodaran data; operating lease liabilities treated as debt-like financing."
+    },
+    {
+      "scenario": "Base",
+      "risk_free_rate": 0.0447,
+      "beta": 1.05,
+      "equity_risk_premium": 0.047,
+      "company_specific_risk_premium": 0.003,
+      "cost_of_equity": 0.09705,
+      "market_value_of_equity": 13836892280.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_weight": 0.8849758449152803,
+      "debt_weight": 0.11502415508471975,
+      "pre_tax_cost_of_debt": 0.06,
+      "tax_rate": 0.25,
+      "after_tax_cost_of_debt": 0.045,
+      "approx_wacc": 0.09106299272784034,
+      "model_wacc_start": 0.0925,
+      "difference": 0.00143700727215966,
+      "source_note": "Base case cross-check for the model's 9.25% starting WACC.",
+      "general_source_note": "CAPM/WACC sanity check: risk-free rate from FRED DGS10; ERP and apparel beta benchmark from Damodaran data; operating lease liabilities treated as debt-like financing."
+    },
+    {
+      "scenario": "Bull",
+      "risk_free_rate": 0.0447,
+      "beta": 0.95,
+      "equity_risk_premium": 0.045,
+      "company_specific_risk_premium": 0.0,
+      "cost_of_equity": 0.08745,
+      "market_value_of_equity": 13836892280.0,
+      "debt_like_lease_liabilities": 1798441000.0,
+      "equity_weight": 0.8849758449152803,
+      "debt_weight": 0.11502415508471975,
+      "pre_tax_cost_of_debt": 0.056,
+      "tax_rate": 0.24,
+      "after_tax_cost_of_debt": 0.04256,
+      "approx_wacc": 0.08228656567824694,
+      "model_wacc_start": 0.0825,
+      "difference": 0.0002134343217530671,
+      "source_note": "Lower risk case reflecting stronger brand stabilization and execution.",
+      "general_source_note": "CAPM/WACC sanity check: risk-free rate from FRED DGS10; ERP and apparel beta benchmark from Damodaran data; operating lease liabilities treated as debt-like financing."
     }
   ]
 }

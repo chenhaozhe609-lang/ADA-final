@@ -40,7 +40,7 @@ Our valuation story is that lululemon is transitioning from a hyper-growth appar
 
 In the base case, we assume that North America stabilizes rather than returns to a high-growth phase, while China Mainland and Rest of World remain the main growth engines. This story is translated into revenue growth assumptions of 2.5% in year 1, 5.5% in year 5, and 2.75% by year 10. Profitability is modeled with a target operating margin of 20.0%, which is above the fiscal 2025 level but below the fiscal 2024 peak. This reflects a partial recovery from recent pressure without assuming that promotion, product mix, tariffs, and inventory risk disappear. Reinvestment is captured through a sales-to-capital ratio of 2.3, recognizing that international growth requires stores, supply chain capacity, technology, and working capital.
 
-The risk assumptions also follow the same story. Because lululemon is exposed to discretionary consumer spending, fashion cycles, brand relevance, and international execution risk, the base case uses a starting WACC of 9.25% that fades to an 8.25% terminal WACC. Terminal growth is set at 2.0%, consistent with a mature premium retailer rather than a long-term hyper-growth company. These assumptions are deliberately more conservative than the first-pass model, which produced a higher base-case value because it assumed stronger growth recovery, higher capital efficiency, lower risk, and a more optimistic terminal profile.
+The risk assumptions also follow the same story. Because lululemon is exposed to discretionary consumer spending, fashion cycles, brand relevance, and international execution risk, the base case uses a starting WACC of 9.25% that fades to an 8.25% terminal WACC. We support this assumption with a CAPM-based WACC sanity check in Appendix B, using the 10-year U.S. Treasury yield around the valuation date, an equity risk premium benchmark, beta assumptions, and operating lease liabilities as debt-like financing. Terminal growth is set at 2.0%, consistent with a mature premium retailer rather than a long-term hyper-growth company. These assumptions are deliberately more conservative than the first-pass model, which produced a higher base-case value because it assumed stronger growth recovery, higher capital efficiency, lower risk, and a more optimistic terminal profile.
 
 The bear and bull cases are designed to test the same story under different outcomes. In the bear case, North America weakness persists, international growth slows, operating margin only reaches 18.0%, and the cost of capital remains higher. In the bull case, international expansion remains strong, brand heat improves, operating leverage returns, and the target operating margin reaches 22.5%. The purpose of these scenarios is not to predict three separate futures with precision. Instead, they show how sensitive lululemon's valuation is to the central debate: whether recent weakness is a temporary reset or the beginning of a structurally lower growth and margin profile.
 
@@ -51,7 +51,7 @@ We value lululemon using a free cash flow to the firm (FCFF) discounted cash flo
 In a fully built cost-of-capital model, the cost of equity would normally be estimated using the capital asset pricing model (CAPM):
 
 $$
-Cost\ of\ Equity = Risk\text{-}free\ Rate + Beta \times Market\ Risk\ Premium
+Cost\ of\ Equity = Risk\text{-}free\ Rate + Beta \times Equity\ Risk\ Premium + Company\text{-}specific\ Risk\ Premium
 $$
 
 WACC would then combine the cost of equity and the after-tax cost of debt according to the company's capital structure:
@@ -60,7 +60,7 @@ $$
 WACC = \frac{E}{D + E} \times R_E + \frac{D}{D + E} \times R_D \times (1 - Tax\ Rate)
 $$
 
-For this course project, we use scenario-calibrated WACC assumptions rather than a full beta-based WACC build. This is a simplification, but it is consistent with the valuation story: the bear case uses a higher cost of capital, the bull case uses a lower cost of capital, and the base case reflects a mature discretionary retail risk profile. A fuller version of the model could refine WACC using peer betas, the current risk-free rate, market risk premium evidence, and market-value capital structure.
+For this course project, we use scenario-calibrated WACC assumptions and then cross-check them against a CAPM-based WACC bridge. This is still a simplification rather than a full peer-beta cost-of-capital model, but it makes the discount-rate assumption more defensible. The risk-free rate is based on the 10-year U.S. Treasury yield near the valuation date; beta, equity risk premium, and small scenario adjustments are used to estimate cost of equity; and operating lease liabilities are treated as debt-like claims because they are also deducted in the enterprise-value-to-equity-value bridge (Federal Reserve Bank of St. Louis, 2026; Damodaran, 2026). The base-case WACC bridge produces an approximate WACC close to the model's 9.25% starting WACC, while the bear case uses a higher cost of capital and the bull case uses a lower cost of capital.
 
 The forecast begins with fiscal 2025 revenue of $11.10 billion and fiscal 2025 operating margin of 19.9%. For each scenario, revenue growth is interpolated from year 1 to year 5 and then to year 10, rather than assumed as a constant rate. Operating margin gradually moves from the current level toward the scenario target margin. EBIT is calculated as forecast revenue multiplied by operating margin:
 
@@ -197,13 +197,36 @@ Key processed data files used in the report include:
 | `project/data/processed/lulu_operating_metrics.csv` | Store count, geographic revenue, product revenue, revenue growth, and comparable sales metrics |
 | `project/data/processed/lulu_historical_ratios.csv` | Historical margins, growth rates, inventory-to-revenue, lease liabilities, and return proxies |
 | `project/data/processed/lulu_valuation_assumptions.csv` | Bear, base, and bull DCF assumptions |
+| `project/data/processed/lulu_wacc_build.csv` | CAPM/WACC sanity check for scenario discount rates |
 | `project/data/processed/lulu_dcf_forecast.csv` | Ten-year DCF forecast by scenario |
 | `project/data/processed/lulu_scenario_summary.csv` | Scenario enterprise value, equity value, and fair value per share |
 | `project/data/processed/lulu_sensitivity_wacc_terminal_growth.csv` | WACC and terminal growth sensitivity table |
 | `project/data/processed/lulu_sensitivity_growth_margin.csv` | Revenue growth and target margin sensitivity table |
 | `project/data/processed/lulu_market_implied_stress.csv` | Stress-test assumptions near the observed market price |
 
-### B. Code and Model Files
+### B. WACC Sanity Check
+
+The DCF model uses scenario-calibrated WACC assumptions, but we also build a CAPM/WACC sanity check so the discount rate is not an unsupported input. Around the June 15, 2026 valuation date, the 10-year U.S. Treasury constant maturity yield was 4.47%, which we use as the risk-free rate (Federal Reserve Bank of St. Louis, 2026). We then estimate cost of equity using beta, an equity risk premium benchmark, and a small company-specific scenario adjustment:
+
+$$
+Cost\ of\ Equity = Risk\text{-}free\ Rate + Beta \times Equity\ Risk\ Premium + Company\text{-}specific\ Risk\ Premium
+$$
+
+Because lululemon has limited traditional financial debt but meaningful operating lease obligations, we treat operating lease liabilities as debt-like financing in the WACC bridge. This is consistent with the equity bridge, where lease liabilities are deducted from enterprise value to estimate equity value. The model uses the valuation-date market capitalization as the market value of equity and fiscal 2025 operating lease liabilities as the debt-like claim:
+
+$$
+WACC = \frac{E}{D + E} \times R_E + \frac{D}{D + E} \times R_D \times (1 - Tax\ Rate)
+$$
+
+| Scenario | Risk-free rate | Beta | Equity risk premium | Extra risk | Cost of equity | After-tax debt cost | Approx. WACC | Model starting WACC |
+| --- | ---: | ---: | ---: | ---: | ---: | ---: | ---: | ---: |
+| Bear | 4.47% | 1.20 | 5.00% | 0.50% | 10.97% | 4.80% | 10.26% | 10.00% |
+| Base | 4.47% | 1.05 | 4.70% | 0.30% | 9.71% | 4.50% | 9.11% | 9.25% |
+| Bull | 4.47% | 0.95 | 4.50% | 0.00% | 8.75% | 4.26% | 8.23% | 8.25% |
+
+This check supports the model's WACC assumptions. The base-case WACC bridge produces an approximate WACC of 9.11%, close to the 9.25% starting WACC used in the DCF. We keep 9.25% in the model because lululemon faces discretionary retail risk, brand execution risk, and uncertainty around the Americas slowdown. The terminal WACC is lower at 8.25% because the terminal period assumes lululemon has become a more mature premium retailer with less transition risk. A more advanced model could refine this section with peer-company betas, a more detailed lease-implied cost of debt, and updated equity risk premium data, but the bridge is sufficient for a course-project sanity check (Damodaran, 2026).
+
+### C. Code and Model Files
 
 The valuation model was built with Python instead of Excel, while also exporting an Excel workbook for review. The main model workbook is `project/output/lulu_valuation_model.xlsx`.
 
@@ -222,15 +245,19 @@ Key code files include:
 
 Course slides in `ref/ref-courseware/` were used as methodology references for accounting data interpretation, inventory analysis, DCF/NPV logic, WACC, CAPM, and firm-value-to-equity-value reasoning.
 
-### C. AI Usage Reference
+### D. AI Usage Reference
 
 AI was used to support planning, data organization, code generation, model review, scenario design, dashboard construction, and drafting assistance. Human team members remain responsible for the final report, final presentation, valuation assumptions, interpretation, and conclusions. The project keeps a separate AI usage log at `project/planning/AI_USAGE_LOG.md`, which records the tools used, prompts asked, outputs adopted, and files affected.
 
-### D. Reproducibility Notes
+### E. Reproducibility Notes
 
 To reproduce the valuation, a reader can start from the processed annual and operating metric files, review the assumptions in `lulu_valuation_assumptions.csv`, and run the valuation and sensitivity scripts. The most important assumptions to test are revenue growth, target operating margin, sales-to-capital, WACC, terminal growth, and the treatment of operating lease liabilities as debt-like claims in the equity bridge.
 
 ## References
+
+Damodaran, A. (2026). *Useful data sets*. New York University Stern School of Business. https://pages.stern.nyu.edu/~adamodar/New_Home_Page/data.html
+
+Federal Reserve Bank of St. Louis. (2026). *Market yield on U.S. Treasury securities at 10-year constant maturity, quoted on an investment basis [DGS10]*. FRED. https://fred.stlouisfed.org/series/DGS10
 
 lululemon athletica inc. (2026a). *Form 10-K for the fiscal year ended February 1, 2026*. U.S. Securities and Exchange Commission. https://www.sec.gov/Archives/edgar/data/1397187/000139718726000020/lulu-20260201.htm
 

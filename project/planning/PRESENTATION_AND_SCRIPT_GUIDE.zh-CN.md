@@ -22,7 +22,7 @@
 - Speaker 2：valuation story、DCF/NPV 方法、WACC/CAPM 口径、base case 估值。重点回答 “How do we turn the story into numbers?”。
 - Speaker 3：scenario/sensitivity、market-implied stress、market price gap、局限性和结论。重点回答 “Why is our value different from market price?”。
 
-Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 scenario-calibrated WACC，并用 CAPM/WACC 作为课程概念框架说明折现率逻辑；目前没有做完整 beta-based WACC 校准，因此应作为 limitation 和 future refinement 提到，不能讲成已经完成了完整市场校准。
+Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 scenario-calibrated WACC，并新增 CAPM/WACC sanity check 支持 9.25% starting WACC。这个检查使用 10-year U.S. Treasury yield、beta、equity risk premium、company-specific risk adjustment 和 operating lease liabilities 作为 debt-like financing；但它仍不是完整 peer-beta WACC 模型，因此不要讲成已经完成了完整市场校准。
 
 即使只有 3 人主讲，所有组员仍应上台。非主讲同学可以负责切换页面、回答 Q&A、展示 dashboard 或补充数据来源。
 
@@ -36,7 +36,7 @@ Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 
 | 1:00-3:00 | 公司概况与为什么选择 LULU | Speaker 1 |
 | 3:00-5:00 | 行业与历史基本面 | Speaker 1 |
 | 5:00-6:30 | Valuation story: 从 hyper-growth 到 mature premium retail | Speaker 2 |
-| 6:30-8:30 | DCF/NPV 方法与 WACC/CAPM 口径 | Speaker 2 |
+| 6:30-8:30 | DCF/NPV 方法与 WACC/CAPM sanity check | Speaker 2 |
 | 8:30-10:00 | Base case 估值结果 | Speaker 2 |
 | 10:00-12:00 | Bear/base/bull、sensitivity 和 market-implied stress | Speaker 3 |
 | 12:00-14:00 | Market price gap: 市场可能隐含什么悲观故事 | Speaker 3 |
@@ -57,7 +57,7 @@ Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 
 | 5 | Industry Context | Activewear 长期趋势 + 竞争和消费者周期风险 |
 | 6 | Historical Fundamentals | Revenue growth slowing, margin pressure, inventory increase |
 | 7 | Our Valuation Story | Mature-growth transition：Americas stabilizes, international expands, margins partially recover |
-| 8 | DCF, NPV, and WACC Method | FCFF 公式、NPV 折现逻辑、scenario-calibrated WACC、CAPM/WACC 课程口径、10-year forecast、terminal value、equity bridge |
+| 8 | DCF, NPV, and WACC Method | FCFF 公式、NPV 折现逻辑、scenario-calibrated WACC、CAPM/WACC sanity check、10-year forecast、terminal value、equity bridge |
 | 9 | Base Case Valuation | EV、equity value、fair value per share；用一张表或 waterfall |
 | 10 | Scenario Results | Bear $170.00 / Base $231.38 / Bull $385.63 |
 | 11 | Sensitivity And Stress Test | 普通 sensitivity 仍高于市价；接近市价需要更悲观假设 |
@@ -107,7 +107,7 @@ Speaker 2 必须明确解释 cost of capital / WACC 口径：报告采用的是 
 三位 speaker 的稿件边界应保持清楚：
 
 - Speaker 1 不需要提前讲 fair value，只需要把公司、行业和历史问题讲到位，为估值故事铺垫。
-- Speaker 2 负责方法与 base case，必须解释 FCFF、NPV、terminal value、WACC，并说明 WACC 是课程框架下的情景校准折现率。
+- Speaker 2 负责方法与 base case，必须解释 FCFF、NPV、terminal value、WACC，并说明 9.25% starting WACC 有 CAPM/WACC sanity check 支持，但不是完整 peer-beta WACC 模型。
 - Speaker 3 负责把不确定性讲清楚，尤其是 scenario analysis、sensitivity analysis、market-implied stress 和 valuation gap。
 
 不要写成：
@@ -165,7 +165,7 @@ PPT 中可以简化，但不能改变结论。
 - 为什么选择 LULU。
 - 从 business story 到 assumptions 的逻辑。
 - FCFF DCF 的基本方法。
-- WACC/CAPM 在报告中的使用口径，以及完整 beta-based WACC 尚未完成这一 limitation。
+- WACC/CAPM 在报告中的使用口径：已经做 sanity check 支持 9.25% starting WACC，但不是完整 peer-beta WACC 模型。
 - Base case fair value 和 market price 对比。
 - Scenario/sensitivity 证明结论对假设敏感。
 - 对 market price gap 的谨慎解释。
@@ -181,7 +181,7 @@ PPT 提交或演示前，主讲同学需要完成：
 - [ ] 15 分钟内完整讲完，最好控制在 14 分 30 秒左右。
 - [ ] 3 位 speaker 分工已固定，且每个人只讲自己负责的内容边界。
 - [ ] 每位 speaker 的开头和结尾衔接自然。
-- [ ] WACC/CAPM 简化口径与 report 保持一致，没有讲成完整市场校准。
+- [ ] WACC/CAPM sanity check 口径与 report 保持一致，没有讲成完整市场校准。
 - [ ] 结论没有说得过度绝对。
 - [ ] 准备好回答 “为什么市场价比你们模型低这么多？”。
 - [ ] 准备好回答 “AI 在项目中具体做了什么？”。

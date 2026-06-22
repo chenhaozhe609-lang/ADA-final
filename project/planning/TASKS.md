@@ -44,7 +44,8 @@
 - [x] Compare with final valuation-date market price.
 - [x] Export model outputs to Excel.
 - [x] Create a presentation-ready beautified Excel workbook copy.
-- [ ] Calibrate WACC with beta, risk-free rate, equity risk premium, and peer evidence.
+- [x] Add CAPM/WACC sanity check using risk-free rate, beta, equity risk premium, lease debt-like financing, and scenario adjustments.
+- [ ] Calibrate WACC with full peer beta, risk-free rate, equity risk premium, and market-value capital structure evidence.
 - [x] Confirm final valuation date and market price source: MarketWatch reported LULU closed at $116.21 on June 15, 2026.
 - [ ] Review and refine assumptions before treating valuation as final.
 
@@ -103,6 +104,7 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 - [x] Add formal APA-style source citations and references.
 - [x] Create human final review checklist for required group rewrite and verification.
 - [x] Polish report against updated courseware and add course-aligned WACC/CAPM methodology note.
+- [x] Add WACC sanity check appendix and source-backed discount-rate explanation.
 - [ ] Human group review and rewrite before submission.
 
 ## Phase 6 - Slides and Presentation
@@ -110,6 +112,7 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 - [x] Create PPT style, content-division, and speech-writing guide for student presenters.
 - [x] Update presentation guide: slides must be in English; live speech may be in Chinese with common valuation terms kept in English.
 - [x] Update presentation guide after report WACC/CAPM polish and fix the presentation structure to 3 speakers.
+- [x] Update presentation guide for WACC sanity check Q&A language.
 - [ ] Create 10-14 slide deck for 15 minutes.
 - [ ] Convert report logic into presentation flow.
 - [ ] Add clean charts and valuation tables.
