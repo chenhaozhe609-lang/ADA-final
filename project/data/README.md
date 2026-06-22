@@ -27,6 +27,7 @@
 
 - `processed/lulu_historical_ratios.csv`: historical margins, growth rates, tax rates, inventory intensity, invested capital, sales-to-capital, and ROIC proxy.
 - `processed/lulu_valuation_assumptions.csv`: bear/base/bull model assumptions.
+- `processed/lulu_wacc_build.csv`: CAPM/WACC sanity check for scenario discount rates, including risk-free rate, beta, equity risk premium, lease debt-like financing, approximate WACC, and model WACC comparison.
 - `processed/lulu_dcf_forecast.csv`: 10-year FCFF DCF forecast by scenario.
 - `processed/lulu_scenario_summary.csv`: enterprise value, equity value, fair value per share, and market price comparison by scenario.
 - `processed/lulu_valuation_comparison.csv`: first-pass versus calibrated valuation comparison.
