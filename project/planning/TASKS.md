@@ -133,5 +133,6 @@ Monte Carlo simulation is intentionally skipped for now. Scenario analysis, two 
 - [ ] Check report language and citations.
 - [ ] Check all numbers reconcile between code, Excel, report, and slides.
 - [x] Check valuation date and market price date.
+- [x] Create a structured `project/deliverables/` package for report, model, presentation support, AI supplement, and dashboard files.
 - [ ] Check PPT can be presented within 15 minutes.
 - [ ] Confirm all required files are ready for submission.

@@ -1,0 +1,342 @@
+metric_group,metric,period,period_end,value,unit,source_report_date,document,table_index,notes
+comparable_sales_growth,Americas - constant_currency,2023 Compared to 2022,2024-01-28,29,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Americas - constant_currency,2024 Compared to 2023,2025-02-02,-1,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Americas - constant_currency,2025 Compared to 2024,2026-02-01,-3,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Americas - reported,2023 Compared to 2022,2024-01-28,8,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Americas - reported,2024 Compared to 2023,2025-02-02,-1,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Americas - reported,2025 Compared to 2024,2026-02-01,-3,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - constant_currency,2023 Compared to 2022,2024-01-28,23,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - constant_currency,2024 Compared to 2023,2025-02-02,27,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - constant_currency,2025 Compared to 2024,2026-02-01,19,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - reported,2023 Compared to 2022,2024-01-28,39,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - reported,2024 Compared to 2023,2025-02-02,25,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,China Mainland - reported,2025 Compared to 2024,2026-02-01,20,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - constant_currency,2023 Compared to 2022,2024-01-28,19,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - constant_currency,2024 Compared to 2023,2025-02-02,20,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - constant_currency,2025 Compared to 2024,2026-02-01,7,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - reported,2023 Compared to 2022,2024-01-28,32,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - reported,2024 Compared to 2023,2025-02-02,19,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Rest of World - reported,2025 Compared to 2024,2026-02-01,9,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - constant_currency,2023 Compared to 2022,2024-01-28,28,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - constant_currency,2024 Compared to 2023,2025-02-02,4,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - constant_currency,2025 Compared to 2024,2026-02-01,2,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - reported,2023 Compared to 2022,2024-01-28,13,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - reported,2024 Compared to 2023,2025-02-02,4,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+comparable_sales_growth,Total comparable sales - reported,2025 Compared to 2024,2026-02-01,2,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - constant_currency,2023 Compared to 2022,2024-01-28,30,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - constant_currency,2024 Compared to 2023,2025-02-02,4,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - constant_currency,2025 Compared to 2024,2026-02-01,-1,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - reported,2023 Compared to 2022,2024-01-28,12,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - reported,2024 Compared to 2023,2025-02-02,4,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Americas - reported,2025 Compared to 2024,2026-02-01,-1,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - constant_currency,2023 Compared to 2022,2024-01-28,40,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - constant_currency,2024 Compared to 2023,2025-02-02,43,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - constant_currency,2025 Compared to 2024,2026-02-01,28,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - reported,2023 Compared to 2022,2024-01-28,67,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - reported,2024 Compared to 2023,2025-02-02,41,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,China Mainland - reported,2025 Compared to 2024,2026-02-01,29,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - constant_currency,2023 Compared to 2022,2024-01-28,49,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - constant_currency,2024 Compared to 2023,2025-02-02,29,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - constant_currency,2025 Compared to 2024,2026-02-01,14,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - reported,2023 Compared to 2022,2024-01-28,43,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - reported,2024 Compared to 2023,2025-02-02,27,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Rest of World - reported,2025 Compared to 2024,2026-02-01,16,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - constant_currency,2023 Compared to 2022,2024-01-28,32,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - constant_currency,2024 Compared to 2023,2025-02-02,11,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - constant_currency,2025 Compared to 2024,2026-02-01,5,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - reported,2023 Compared to 2022,2024-01-28,19,percent,2024-01-28,lulu-20240128.htm,39,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - reported,2024 Compared to 2023,2025-02-02,10,percent,2025-02-02,lulu-20250202.htm,29,growth and comparable sales change from 10-K MD&A table
+net_revenue_growth,Total net revenue - reported,2025 Compared to 2024,2026-02-01,5,percent,2026-02-01,lulu-20260201.htm,27,growth and comparable sales change from 10-K MD&A table
+revenue_by_market,Americas,2021,,5299906,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2021,,1867016,USD thousands,2024-01-28,lulu-20240128.htm,35,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2022,,6817454,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2022,,2503740,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2022,2024-01-28,6817454,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2022,2024-01-28,2503740,USD thousands,2024-01-28,lulu-20240128.htm,35,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2023,2024-01-28,7631647,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2023,2024-01-28,2937184,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2023,,7631647,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2024,2025-02-02,7928156,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2024,,7928156,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2025,2026-02-01,7847044,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2025,,1674558,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Americas,2026,2026-05-03,1621210,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2021,,434261,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2021,,167318,USD thousands,2024-01-28,lulu-20240128.htm,35,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2022,,576503,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2022,,196865,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2022,2024-01-28,576503,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2022,2024-01-28,196865,USD thousands,2024-01-28,lulu-20240128.htm,35,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2023,2024-01-28,963760,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2023,2024-01-28,337316,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2023,,963760,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2024,2025-02-02,1361337,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2024,,1361337,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2025,2026-02-01,1754799,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2025,,368101,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,China Mainland,2026,2026-05-03,478395,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2021,,6256617,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2022,,8110518,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2022,2024-01-28,8110518,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2023,2024-01-28,9619278,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2023,,9619278,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2024,2025-02-02,10588126,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2024,,10588126,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2025,2026-02-01,11102600,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2025,,2370660,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Net revenue,2026,2026-05-03,2471603,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2021,,522450,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2022,,716561,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2022,,103204,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2022,2024-01-28,716561,USD thousands,2024-01-28,lulu-20240128.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2022,2024-01-28,103204,USD thousands,2024-01-28,lulu-20240128.htm,35,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2023,2024-01-28,1023871,USD thousands,2024-01-28,lulu-20240128.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2023,2024-01-28,201832,USD thousands,2024-01-28,lulu-20240128.htm,24,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2023,,1023871,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2024,2025-02-02,1298633,USD thousands,2025-02-02,lulu-20250202.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2024,,1298633,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2025,2026-02-01,1500757,USD thousands,2026-02-01,lulu-20260201.htm,18,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2025,,328001,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_market,Rest of World,2026,2026-05-03,371998,USD thousands,2026-05-03,lulu-20260503_10q.htm,28,net revenue by market from 10-K MD&A table
+revenue_by_product,Accessories and other categories,2023,,1219153,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Accessories and other categories,2024,,1337116,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Accessories and other categories,2025,2026-02-01,1443249,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Accessories and other categories,2025,,290700,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+revenue_by_product,Accessories and other categories,2026,2026-05-03,286740,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+revenue_by_product,Men's apparel,2023,,2252753,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Men's apparel,2024,,2558380,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Men's apparel,2025,2026-02-01,2663986,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Men's apparel,2025,,544788,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+revenue_by_product,Men's apparel,2026,2026-05-03,581878,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+revenue_by_product,Women's apparel,2023,,6147372,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Women's apparel,2024,,6692630,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Women's apparel,2025,2026-02-01,6995365,USD thousands,2026-02-01,lulu-20260201.htm,39,net revenue by product category from 10-K footnote
+revenue_by_product,Women's apparel,2025,,1535172,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+revenue_by_product,Women's apparel,2026,2026-05-03,1602985,USD thousands,2026-05-03,lulu-20260503_10q.htm,13,net revenue by product category from 10-K footnote
+store_count,APAC,"January 28, 2024",2024-01-28,98,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,APAC,"January 29, 2023",,91,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,APAC,"February 2, 2025",2025-02-02,107,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,APAC,"January 28, 2024",,98,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,APAC,"February 1, 2026",2026-02-01,114,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,APAC,"February 2, 2025",,107,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,APAC,"February 1, 2026",,114,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,APAC,"May 3, 2026",2026-05-03,117,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Americas,"January 28, 2024",2024-01-28,438,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Americas,"January 29, 2023",,419,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Americas,"February 2, 2025",2025-02-02,462,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Americas,"January 28, 2024",,438,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Americas,"February 1, 2026",2026-02-01,476,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,Americas,"February 2, 2025",,462,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,Americas,"May 3, 2026",2026-05-03,476,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Australia,"January 30, 2022",2022-01-30,31,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Australia,"January 29, 2023",2023-01-29,32,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Australia,"January 30, 2022",,31,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Australia,"January 28, 2024",2024-01-28,33,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Australia,"January 29, 2023",,32,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Australia,"February 2, 2025",2025-02-02,33,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Australia,"February 1, 2026",2026-02-01,34,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Australia,"February 2, 2025",,33,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Australia,"February 1, 2026",,34,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Australia,"May 3, 2026",2026-05-03,33,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Canada,"January 30, 2022",2022-01-30,63,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Canada,"January 31, 2021",,62,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Canada,"January 29, 2023",2023-01-29,69,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Canada,"January 30, 2022",,63,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Canada,"January 28, 2024",2024-01-28,71,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Canada,"January 29, 2023",,69,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Canada,"February 2, 2025",2025-02-02,71,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Canada,"February 1, 2026",2026-02-01,71,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,Canada,"February 1, 2026",,71,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Canada,"May 3, 2026",2026-05-03,72,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,China Mainland,"January 28, 2024",2024-01-28,127,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,China Mainland,"January 29, 2023",,99,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,China Mainland,"February 2, 2025",2025-02-02,151,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,China Mainland,"January 28, 2024",,127,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,China Mainland,"February 1, 2026",2026-02-01,172,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,China Mainland,"February 2, 2025",,151,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,China Mainland,"February 1, 2026",,172,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,China Mainland,"May 3, 2026",2026-05-03,173,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,EMEA,"January 28, 2024",2024-01-28,48,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,EMEA,"January 29, 2023",,46,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,EMEA,"February 2, 2025",2025-02-02,47,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,EMEA,"January 28, 2024",,48,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,EMEA,"February 1, 2026",2026-02-01,49,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,EMEA,"February 2, 2025",,47,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,EMEA,"February 1, 2026",,49,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,EMEA,"May 3, 2026",2026-05-03,50,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,France,"January 30, 2022",2022-01-30,3,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,France,"January 29, 2023",2023-01-29,4,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,France,"January 30, 2022",,3,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,France,"January 28, 2024",2024-01-28,6,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,France,"January 29, 2023",,4,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,France,"February 2, 2025",2025-02-02,6,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,France,"February 1, 2026",2026-02-01,6,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,France,"May 3, 2026",2026-05-03,6,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Germany,"January 30, 2022",2022-01-30,9,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Germany,"January 31, 2021",,7,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Germany,"January 29, 2023",2023-01-29,10,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Germany,"January 30, 2022",,9,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Germany,"January 28, 2024",2024-01-28,9,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Germany,"January 29, 2023",,10,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Germany,"February 2, 2025",2025-02-02,9,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Germany,"February 1, 2026",2026-02-01,9,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Germany,"May 3, 2026",2026-05-03,9,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Hong Kong SAR,"January 28, 2024",2024-01-28,9,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Hong Kong SAR,"February 2, 2025",2025-02-02,10,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Hong Kong SAR,"January 28, 2024",,9,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Hong Kong SAR,"February 1, 2026",2026-02-01,11,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Hong Kong SAR,"February 2, 2025",,10,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Hong Kong SAR,"May 3, 2026",2026-05-03,11,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Ireland,"January 30, 2022",2022-01-30,3,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Ireland,"January 31, 2021",,1,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Ireland,"January 29, 2023",2023-01-29,4,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Ireland,"January 30, 2022",,3,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Ireland,"January 28, 2024",2024-01-28,4,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Ireland,"February 2, 2025",2025-02-02,4,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Ireland,"February 1, 2026",2026-02-01,4,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Ireland,"May 3, 2026",2026-05-03,4,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Italy,"February 1, 2026",2026-02-01,1,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Italy,"May 3, 2026",2026-05-03,1,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Japan,"January 30, 2022",2022-01-30,6,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Japan,"January 29, 2023",2023-01-29,7,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Japan,"January 30, 2022",,6,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Japan,"January 28, 2024",2024-01-28,8,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Japan,"January 29, 2023",,7,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Japan,"February 2, 2025",2025-02-02,10,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Japan,"January 28, 2024",,8,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Japan,"February 1, 2026",2026-02-01,10,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Japan,"May 3, 2026",2026-05-03,10,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Macau SAR,"January 28, 2024",2024-01-28,2,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Macau SAR,"February 2, 2025",2025-02-02,2,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Macau SAR,"February 1, 2026",2026-02-01,3,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Macau SAR,"February 2, 2025",,2,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Macau SAR,"May 3, 2026",2026-05-03,3,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Malaysia,"January 30, 2022",2022-01-30,2,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Malaysia,"January 29, 2023",2023-01-29,2,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Malaysia,"January 28, 2024",2024-01-28,3,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Malaysia,"January 29, 2023",,2,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Malaysia,"February 2, 2025",2025-02-02,5,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Malaysia,"January 28, 2024",,3,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Malaysia,"February 1, 2026",2026-02-01,5,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Malaysia,"May 3, 2026",2026-05-03,5,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Mexico,"February 2, 2025",2025-02-02,17,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Mexico,"February 1, 2026",2026-02-01,26,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,Mexico,"February 2, 2025",,17,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,Mexico,"February 1, 2026",,26,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Mexico,"May 3, 2026",2026-05-03,27,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Netherlands,"January 30, 2022",2022-01-30,1,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Netherlands,"January 29, 2023",2023-01-29,1,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Netherlands,"January 28, 2024",2024-01-28,2,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Netherlands,"January 29, 2023",,1,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Netherlands,"February 2, 2025",2025-02-02,2,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Netherlands,"February 1, 2026",2026-02-01,2,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Netherlands,"May 3, 2026",2026-05-03,2,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,New Zealand,"January 30, 2022",2022-01-30,7,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,New Zealand,"January 29, 2023",2023-01-29,8,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,New Zealand,"January 30, 2022",,7,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,New Zealand,"January 28, 2024",2024-01-28,8,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,New Zealand,"February 2, 2025",2025-02-02,8,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,New Zealand,"February 1, 2026",2026-02-01,8,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,New Zealand,"May 3, 2026",2026-05-03,8,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Norway,"January 30, 2022",2022-01-30,1,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Norway,"January 29, 2023",2023-01-29,1,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Norway,"January 28, 2024",2024-01-28,1,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Norway,"February 2, 2025",2025-02-02,1,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Norway,"February 1, 2026",2026-02-01,1,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Norway,"May 3, 2026",2026-05-03,1,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,People's Republic of China(1),"January 30, 2022",2022-01-30,86,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,People's Republic of China(1),"January 31, 2021",,55,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,People's Republic of China(1),"January 29, 2023",2023-01-29,117,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,People's Republic of China(1),"January 30, 2022",,86,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Rest of World,"February 1, 2026",2026-02-01,163,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Rest of World,"February 2, 2025",,154,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Rest of World,"February 1, 2026",,163,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Rest of World,"May 3, 2026",2026-05-03,167,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Singapore,"January 30, 2022",2022-01-30,6,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Singapore,"January 31, 2021",,4,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Singapore,"January 29, 2023",2023-01-29,8,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Singapore,"January 30, 2022",,6,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Singapore,"January 28, 2024",2024-01-28,7,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Singapore,"January 29, 2023",,8,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Singapore,"February 2, 2025",2025-02-02,7,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Singapore,"February 1, 2026",2026-02-01,9,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Singapore,"February 2, 2025",,7,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Singapore,"May 3, 2026",2026-05-03,9,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,South Korea,"January 30, 2022",2022-01-30,12,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,South Korea,"January 31, 2021",,7,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,South Korea,"January 29, 2023",2023-01-29,16,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,South Korea,"January 30, 2022",,12,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,South Korea,"January 28, 2024",2024-01-28,19,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,South Korea,"January 29, 2023",,16,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,South Korea,"February 2, 2025",2025-02-02,20,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,South Korea,"January 28, 2024",,19,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,South Korea,"February 1, 2026",2026-02-01,22,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,South Korea,"February 2, 2025",,20,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,South Korea,"February 1, 2026",,22,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,South Korea,"May 3, 2026",2026-05-03,23,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Spain,"January 29, 2023",2023-01-29,3,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Spain,"January 28, 2024",2024-01-28,3,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Spain,"February 2, 2025",2025-02-02,3,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Spain,"February 1, 2026",2026-02-01,3,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Spain,"May 3, 2026",2026-05-03,3,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Sweden,"January 30, 2022",2022-01-30,2,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Sweden,"January 29, 2023",2023-01-29,2,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Sweden,"January 28, 2024",2024-01-28,2,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Sweden,"February 2, 2025",2025-02-02,2,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Sweden,"February 1, 2026",2026-02-01,2,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Sweden,"May 3, 2026",2026-05-03,2,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Switzerland,"January 30, 2022",2022-01-30,1,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Switzerland,"January 29, 2023",2023-01-29,1,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Switzerland,"January 28, 2024",2024-01-28,1,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Switzerland,"February 2, 2025",2025-02-02,1,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Switzerland,"February 1, 2026",2026-02-01,1,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Switzerland,"May 3, 2026",2026-05-03,1,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Taiwan,"January 28, 2024",2024-01-28,8,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Taiwan,"January 29, 2023",,7,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Taiwan,"February 2, 2025",2025-02-02,8,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Taiwan,"February 1, 2026",2026-02-01,7,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Taiwan,"February 2, 2025",,8,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Taiwan,"February 1, 2026",,7,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Taiwan,"May 3, 2026",2026-05-03,8,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Thailand,"January 28, 2024",2024-01-28,1,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,Thailand,"February 2, 2025",2025-02-02,4,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Thailand,"January 28, 2024",,1,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,Thailand,"February 1, 2026",2026-02-01,5,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Thailand,"February 2, 2025",,4,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Thailand,"February 1, 2026",,5,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Thailand,"May 3, 2026",2026-05-03,7,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Total company-operated stores,"January 30, 2022",2022-01-30,574,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Total company-operated stores,"January 31, 2021",,521,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,Total company-operated stores,"January 29, 2023",2023-01-29,655,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Total company-operated stores,"January 30, 2022",,574,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,Total company-operated stores,"January 28, 2024",2024-01-28,711,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"January 29, 2023",,655,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"February 2, 2025",2025-02-02,767,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"January 28, 2024",,711,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"February 1, 2026",2026-02-01,811,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"February 2, 2025",,767,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,Total company-operated stores,"February 1, 2026",,811,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,Total company-operated stores,"May 3, 2026",2026-05-03,816,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,United Kingdom,"January 30, 2022",2022-01-30,17,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,United Kingdom,"January 31, 2021",,16,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,United Kingdom,"January 29, 2023",2023-01-29,20,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,United Kingdom,"January 30, 2022",,17,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,United Kingdom,"January 28, 2024",2024-01-28,20,stores,2024-01-28,lulu-20240128.htm,10,company-operated stores by market/country
+store_count,United Kingdom,"February 2, 2025",2025-02-02,19,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,United Kingdom,"January 28, 2024",,20,stores,2025-02-02,lulu-20250202.htm,10,company-operated stores by market/country
+store_count,United Kingdom,"February 1, 2026",2026-02-01,20,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,United Kingdom,"February 2, 2025",,19,stores,2026-02-01,lulu-20260201.htm,10,company-operated stores by market/country
+store_count,United Kingdom,"February 1, 2026",,20,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,United Kingdom,"May 3, 2026",2026-05-03,21,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,United States,"January 30, 2022",2022-01-30,324,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,United States,"January 31, 2021",,315,stores,2022-01-30,lulu-20220130.htm,6,company-operated stores by market/country
+store_count,United States,"January 29, 2023",2023-01-29,350,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,United States,"January 30, 2022",,324,stores,2023-01-29,lulu-20230129.htm,6,company-operated stores by market/country
+store_count,United States,"January 28, 2024",2024-01-28,367,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,United States,"January 29, 2023",,350,stores,2024-01-28,lulu-20240128.htm,9,company-operated stores by market/country
+store_count,United States,"February 2, 2025",2025-02-02,374,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,United States,"January 28, 2024",,367,stores,2025-02-02,lulu-20250202.htm,9,company-operated stores by market/country
+store_count,United States,"February 1, 2026",2026-02-01,379,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,United States,"February 2, 2025",,374,stores,2026-02-01,lulu-20260201.htm,9,company-operated stores by market/country
+store_count,United States,"February 1, 2026",,379,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country
+store_count,United States,"May 3, 2026",2026-05-03,377,stores,2026-05-03,lulu-20260503_10q.htm,40,company-operated stores by market/country

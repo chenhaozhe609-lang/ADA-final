@@ -1,0 +1,428 @@
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% lululemon Valuation Report — Version 3 (Makoto Technical Report, LaTeXTemplates.com)
+% 样式：CSMakotoTechnicalReport.cls（IBM Plex 双栏技术报告风），CC BY-NC-SA 4.0
+% 引擎：XeLaTeX（自带 IBM Plex 字体）+ biber
+%   xelatex → biber → xelatex → xelatex
+% 内容忠实自 ADA/lululemon_valuation_report.md，未翻译/增删队友论断。
+%!TEX program = xelatex
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[a4paper]{CSMakotoTechnicalReport}
+
+\usepackage{amsmath} % 报告含 DCF 公式，类未加载，这里补上
+\addbibresource{lulu.bib}
+
+%---------------------------------------------------------------- v3 升级：研报风样式
+\usepackage[most]{tcolorbox} % 评级框 / 目标价横幅
+% 强调色板（与 make_figures.py 的图内配色保持一致）
+\definecolor{NavyAccent}{HTML}{0B2545}  % 主色：深海军蓝
+\definecolor{NavyAccent2}{HTML}{13315C}
+\definecolor{AccentRed}{HTML}{C8102E}   % 强调：研报红（LULU）
+\definecolor{UpGreen}{HTML}{1B7A4B}     % 上行/正面
+\definecolor{UpGreenLt}{HTML}{8FE3B0}
+\definecolor{KpiBg}{HTML}{EEF1F5}       % KPI 条底色
+% KPI 单元：粗标签 + 小字数值
+\newcommand{\kpi}[2]{\textbf{#1}\,{\footnotesize #2}}
+\newcommand{\kpidot}{\;\textcolor{NavyAccent}{\footnotesize\textbullet}\;}
+% 图来源脚注（卖方研报惯例：每图标 Source）
+\newcommand{\figsource}[1]{\textnormal{\footnotesize\itshape Source: #1}}
+
+%---------------------------------------------------------------- REPORT INFO
+\reporttitle{lululemon Valuation\\ Report}
+\reportsubtitle{Equity valuation of lululemon athletica inc.\ (LULU)\\ via an FCFF discounted cash flow model}
+\reportauthors{Accounting Data Analysis (ADA) Course Project --- \textbf{Group 5}\\\smallskip emlyon business school \textbar{} Harbin Institute of Technology}
+\reportdate{June 2026}
+\leftheadercontent{lululemon Valuation Report}
+\rightheadercontent{\textbf{LULU} · ADA Course Project}
+
+\begin{document}
+
+%---------------------------------------------------------------- TITLE SECTION
+\thispagestyle{empty}
+\vspace*{0.005\textheight}
+
+% 研报头版：两校 logo（emlyon 左 / HIT 右）+ 中部研报标签
+\noindent\includegraphics[height=1.35cm]{emlyon.png}\hfill
+\raisebox{0.42cm}{\plexsansmedium\large\color{NavyAccent}EQUITY RESEARCH \textcolor{AccentRed}{$\vert$} DCF VALUATION}\hfill
+\includegraphics[height=1.35cm]{hit.png}\par
+\vspace{6pt}
+{\color{NavyAccent}\rule{\linewidth}{2.4pt}}\par
+\vspace{11pt}
+
+% Ticker 标题 + 副标题
+{\fontsize{30pt}{32pt}\selectfont\plexsansmedium\color{NavyAccent}lululemon athletica\, \textcolor{AccentRed}{(LULU)}\par}
+\vspace{4pt}
+{\Large\raggedright\textit{\reportsubtitle}\par}
+\vspace{12pt}
+
+% 评级 + 目标价横幅
+\begin{tcolorbox}[colback=NavyAccent,colframe=NavyAccent,arc=2pt,boxrule=0pt,
+	left=12pt,right=12pt,top=9pt,bottom=9pt,enhanced,
+	overlay={\fill[AccentRed] (frame.south west) rectangle ([xshift=4pt]frame.north west);}]
+\color{white}\sffamily
+\begin{minipage}[c]{0.30\linewidth}
+	{\footnotesize\color{white!75}RATING}\\[2pt]
+	{\LARGE\bfseries UNDERVALUED}\\[2pt]
+	{\footnotesize Base-case FCFF DCF}
+\end{minipage}\hfill
+{\color{white!35}\vrule width 0.6pt height 1.15cm}\hfill
+\begin{minipage}[c]{0.62\linewidth}
+	\renewcommand{\arraystretch}{1.2}
+	\begin{tabular}{@{}l l @{\hspace{18pt}} l l@{}}
+		{\footnotesize\color{white!75}TARGET (BASE)} & {\large\bfseries US\$231.38} &
+		{\footnotesize\color{white!75}MARKET} & {\large\bfseries US\$116.21}\\
+		{\footnotesize\color{white!75}UPSIDE} & {\large\bfseries\color{UpGreenLt}+99\%} &
+		{\footnotesize\color{white!75}AS OF} & {\large\bfseries 15 Jun 2026}\\
+	\end{tabular}
+\end{minipage}
+\end{tcolorbox}
+\vspace{8pt}
+
+% KPI 条（FY2025 实绩）
+\noindent\colorbox{KpiBg}{\parbox{\dimexpr\linewidth-2\fboxsep\relax}{\vspace{2pt}\centering
+	{\footnotesize\color{NavyAccent2}\textbf{FY2025}}\kpidot
+	\kpi{Revenue}{\$11.10B}\kpidot
+	\kpi{Gross margin}{56.6\%}\kpidot
+	\kpi{Op. margin}{19.9\%}\kpidot
+	\kpi{Net margin}{14.2\%}\kpidot
+	\kpi{Diluted EPS}{\$13.26}\kpidot
+	\kpi{Stores}{811}
+	\vspace{3pt}}}\par
+\vspace{12pt}
+
+{\large\raggedright\reportauthors\par}
+\vspace{6pt}
+{\footnotesize\raggedright\textit{All dollar amounts are in U.S.\ dollars unless otherwise stated. This report is prepared as a course valuation case study and should not be read as investment advice.}~\textbar~\reportdate\par}
+
+\vspace{0.03\textheight}
+
+\begin{multicols}{2}
+
+\tableofcontents
+
+%---------------------------------------------------------------- 1
+\section{Executive Summary}
+
+This report values lululemon athletica inc.\ (LULU), a premium athletic apparel company, using a free cash flow to the firm (FCFF) discounted cash flow model supported by historical financial data, operating metrics, scenario analysis, and sensitivity tests. The central story is that lululemon is moving from a hyper-growth apparel brand toward a mature global premium retailer. The company faces real pressure in the Americas, where fiscal 2025 revenue declined and comparable sales were negative, but it still benefits from brand strength, high gross margins, and strong growth in China Mainland and Rest of World markets \autocite{lulu10k,lulu10q}.
+
+\begin{quote}
+\textbf{\LARGE ``}Using June 15, 2026 and a market price of \$116.21, our base-case DCF estimates lululemon's fair value at \$231.38 per share --- leaving the market price about 49.8\% below intrinsic value, or roughly 99\% potential upside. lululemon appears undervalued under the base case.\textbf{''}
+
+\hfill--- Base case finding
+\end{quote}
+
+The bear and bull cases give \$170.00 and \$385.63 per share. Under the base case, the market price is about 49.8\% below our estimated intrinsic value, suggesting the market may be pricing in a much harsher long-term slowdown than our mature-growth story assumes \autocite{marketwatch2026}. The conclusion depends heavily on whether international growth and partial margin recovery can offset sustained weakness in the Americas.
+
+%---------------------------------------------------------------- 2
+\section{Company Overview}
+
+lululemon athletica inc.\ is a global premium athletic apparel retailer best known for performance-oriented apparel, footwear, and accessories across yoga, training, running, and everyday activewear. It operates a vertically integrated model combining product design, brand management, direct-to-consumer digital channels, and company-operated stores \autocite{lulu10k}. This gives lululemon more control over pricing, customer experience, and brand positioning than a wholesale-heavy business, supporting higher gross margins but also exposing it directly to store productivity, inventory execution, and demand cycles.
+
+In fiscal 2025, lululemon generated \$11.10 billion of net revenue across 811 company-operated stores at year-end:
+
+\begin{description}
+	\item[Americas] \$7.85B (70.7\% of revenue)
+	\item[China Mainland] \$1.75B (15.8\%)
+	\item[Rest of World] \$1.50B (13.5\%)
+\end{description}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f3_geographic_mix.pdf}
+	\caption{FY2025 revenue is concentrated in the Americas, with China Mainland and Rest of World as the growth engines. \figsource{lululemon Form 10-K (fiscal 2025) geographic segment disclosure.}}
+	\label{fig:geo}
+\end{figure}
+
+By category, women's apparel was the largest segment at \$7.00 billion, followed by men's apparel at \$2.66 billion and accessories and other at \$1.44 billion. lululemon is large enough to be valued as a mature public company, but still has meaningful geographic and category expansion opportunities that can be built into a DCF forecast.
+
+%---------------------------------------------------------------- 3
+\section{Industry Analysis}
+
+lululemon operates in the global athletic apparel and active lifestyle market, supported by long-term demand for fitness, wellness, casualization of clothing, and direct-to-consumer retail. These drivers make the industry more attractive than traditional apparel, but the category is not immune to fashion risk or consumer weakness. Growth therefore cannot be projected only from historical momentum; the forecast must reflect whether the brand can keep earning premium pricing as competition intensifies.
+
+The competitive structure is broad and increasingly crowded: lululemon competes with global sportswear leaders, specialty athletic brands, premium lifestyle challengers, private labels, and lower-priced apparel retailers \autocite{lulu10k}. This (i) limits how long very high growth can be sustained in mature markets such as North America, and (ii) pressures gross margin and inventory if product innovation slows or consumers become more price-sensitive. lululemon's direct-to-consumer model, loyal customer base, and premium positioning help explain why its margins remain stronger than many peers.
+
+In our DCF, this view leads to a mature-growth base case: modest near-term growth, international markets as the key driver, a partial (not automatic) margin recovery, and a discount rate reflecting the risk of a discretionary premium retail business.
+
+%---------------------------------------------------------------- 4
+\section{Historical Fundamentals}
+
+lululemon has scaled quickly while maintaining premium economics. Net revenue rose from \$6.26 billion (year ended January 30, 2022) to \$11.10 billion (year ended February 1, 2026), a four-year CAGR of about 15.4\% \autocite{lulu10k,seccompanyfacts}. However, growth has clearly slowed: revenue growth fell from 29.6\% (FY2022) and 18.6\% (FY2023) to 10.1\% (FY2024) and 4.9\% (FY2025).
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f2_growth_decay.pdf}
+	\caption{Revenue growth has decelerated sharply and stabilizes at a low single-digit pace in the base-case forecast. \figsource{SEC company facts and lululemon 10-K; team DCF forecast \texttt{lulu\_dcf\_forecast.csv}.}}
+	\label{fig:growth}
+\end{figure}
+
+Profitability remains a core strength but shows recent pressure. Gross margin was 56.6\% in FY2025 (down from 59.2\% in FY2024 but still high for apparel); operating margin fell from 23.7\% to 19.9\%, and net margin from 17.1\% to 14.2\%. This indicates the brand still has pricing power, but the model should not assume an automatic return to peak profitability --- it supports a partial margin recovery.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f1_revenue_margin.pdf}
+	\caption{Revenue scaled to \$11.10B while gross, operating, and net margins peaked then softened (fiscal 2021--2025). \figsource{lululemon Form 10-K (FY2026) and SEC company facts; team \texttt{lulu\_historical\_ratios.csv}.}}
+	\label{fig:revmargin}
+\end{figure}
+
+The balance sheet is supportive but not risk-free: \$1.81 billion of cash at fiscal 2025 year-end, no traditional financial debt in the curated dataset, operating lease liabilities of about \$1.80 billion, and diluted shares reduced from 130.3 million (FY2021) to 119.1 million (FY2025) via repurchases. Inventory rose to 15.3\% of revenue (FY2025) from 13.6\% (FY2024), which can signal weaker demand, markdown risk, or greater working capital needs \autocite{seccompanyfacts}. The fundamentals support a high-quality but more mature valuation story.
+
+%---------------------------------------------------------------- 5
+\section{Valuation Story}
+
+lululemon is transitioning from a hyper-growth apparel brand into a mature global premium retailer. It still has attractive brand economics, a direct customer relationship, high gross margins, and international expansion potential; at the same time, the Americas business is no longer growing strongly, comparable sales have weakened, operating margin has declined, and inventory has increased relative to revenue. The valuation problem is therefore not whether lululemon is a good company, but how much investors should pay for a good company whose growth profile has become less certain.
+
+In the \textbf{base case}, North America stabilizes rather than returns to high growth, while China Mainland and Rest of World remain the main growth engines: revenue growth of 2.5\% (year 1), 5.5\% (year 5), fading to 2.75\% (year 10); a target operating margin of 20.0\%; reinvestment via a sales-to-capital ratio of 2.3; a starting WACC of 9.25\% fading to an 8.25\% terminal WACC; and terminal growth of 2.0\%. We support the 9.25\% starting WACC with a CAPM/WACC sanity check using the 10-year U.S.\ Treasury yield around the valuation date, beta and equity risk premium assumptions, and operating lease liabilities as debt-like financing. In the \textbf{bear case}, Americas weakness persists, international growth slows, operating margin only reaches 18.0\%, and the cost of capital stays higher. In the \textbf{bull case}, international expansion stays strong, brand heat improves, operating leverage returns, and the target operating margin reaches 22.5\%.
+
+\end{multicols}
+
+%---------------------------------------------------------------- 6 (full width for equations)
+\section{DCF Valuation Methodology}
+
+We value lululemon using a free cash flow to the firm (FCFF) discounted cash flow model: forecast the cash flows available to all capital providers, discount them at the weighted average cost of capital (WACC), and convert the resulting enterprise value into equity value. This follows the course's NPV logic --- value is the present value of expected future cash flows, and riskier cash flows require a higher discount rate. Throughout, the subscript $t$ denotes the forecast year ($t = 1, \dots, 10$).
+
+\paragraph{Cost of capital.} In a fully specified model the cost of equity is estimated with the capital asset pricing model (CAPM), Equation~\eqref{eq:coe}, and the WACC combines the cost of equity $R_E$ and the after-tax cost of debt $R_D$ weighted by the market-value capital structure, Equation~\eqref{eq:wacc}:
+\begin{equation}
+R_E = R_f + \beta \,(R_m - R_f) + \alpha \label{eq:coe}
+\end{equation}
+\begin{equation}
+\text{WACC} = \frac{E}{D+E}\,R_E + \frac{D}{D+E}\,R_D\,(1-\tau) \label{eq:wacc}
+\end{equation}
+where $R_f$ is the risk-free rate, $R_m - R_f$ the market risk premium, $\beta$ the equity beta, $\alpha$ a small company-specific scenario risk adjustment, $E$ and $D$ the market values of equity and debt, and $\tau$ the tax rate. For this course project we use scenario-calibrated WACC assumptions and then cross-check them with a CAPM/WACC bridge. The risk-free rate is based on the 10-year U.S.\ Treasury yield near the valuation date; beta, equity risk premium, and small scenario adjustments are used to estimate cost of equity; and operating lease liabilities are treated as debt-like claims because they are also deducted in the enterprise-value-to-equity-value bridge \autocite{fredDGS10,damodaranData}. This is still a simplification rather than a full peer-beta cost-of-capital model, but the base-case bridge produces a WACC close to the 9.25\% starting WACC used in the DCF.
+
+\paragraph{Forecast cash flows.} The forecast begins with fiscal 2025 revenue of \$11.10 billion and operating margin of 19.9\%; revenue growth is interpolated from year~1 to year~5 to year~10. For each forecast year, operating income (EBIT) is revenue times the operating margin $m_t$, Equation~\eqref{eq:ebit}; net operating profit after tax (NOPAT) applies the tax rate $\tau$, Equation~\eqref{eq:nopat}; reinvestment is the change in revenue scaled by the sales-to-capital ratio $s$, Equation~\eqref{eq:reinv}; and FCFF is NOPAT net of reinvestment, Equation~\eqref{eq:fcff}:
+\begin{equation}
+\text{EBIT}_t = \text{Revenue}_t \times m_t \label{eq:ebit}
+\end{equation}
+\begin{equation}
+\text{NOPAT}_t = \text{EBIT}_t \,(1-\tau) \label{eq:nopat}
+\end{equation}
+\begin{equation}
+\text{Reinvestment}_t = \frac{\text{Revenue}_t - \text{Revenue}_{t-1}}{s} \label{eq:reinv}
+\end{equation}
+\begin{equation}
+\text{FCFF}_t = \text{NOPAT}_t - \text{Reinvestment}_t \label{eq:fcff}
+\end{equation}
+
+\paragraph{Discounting and the equity bridge.} Each year's FCFF is discounted at a WACC that fades from a starting to a terminal value. Terminal value grows year-10 FCFF at the terminal growth rate $g$, Equation~\eqref{eq:tv}; the cumulative discount factor compounds the year-by-year WACC, Equation~\eqref{eq:df}; enterprise value is the present value of the explicit FCFF plus the present value of terminal value, Equation~\eqref{eq:ev}; and the equity bridge adds cash, subtracts debt-like operating lease liabilities, and divides by diluted shares, Equations~\eqref{eq:eq}--\eqref{eq:fv}:
+\begin{equation}
+\text{Terminal Value} = \frac{\text{FCFF}_{10}\,(1+g)}{\text{WACC}_{\text{terminal}} - g} \label{eq:tv}
+\end{equation}
+\begin{equation}
+\text{DF}_t = \prod_{i=1}^{t}\bigl(1+\text{WACC}_i\bigr) \label{eq:df}
+\end{equation}
+\begin{equation}
+\text{EV} = \sum_{t=1}^{10}\frac{\text{FCFF}_t}{\text{DF}_t} + \frac{\text{Terminal Value}}{\text{DF}_{10}} \label{eq:ev}
+\end{equation}
+\begin{equation}
+\text{Equity Value} = \text{EV} + \text{Cash} - \text{Debt-like Lease Liabilities} \label{eq:eq}
+\end{equation}
+\begin{equation}
+\text{Fair Value per Share} = \frac{\text{Equity Value}}{\text{Diluted Shares Outstanding}} \label{eq:fv}
+\end{equation}
+This links growth directly to the capital needed to generate it; treating operating leases as debt-like claims in the equity bridge, Equation~\eqref{eq:eq}, is a deliberate modeling judgment.
+
+\begin{multicols}{2}
+
+%---------------------------------------------------------------- 7
+\section{Base Case Valuation}
+
+The base case applies the mature-growth story above. Revenue grows from \$11.10 billion (FY2025) to \$16.31 billion (year 10), with growth beginning at 2.5\%, rising to 5.5\% by year 5, and fading to 2.75\% by year 10. Operating margin recovers only modestly, from 19.9\% to a 20.0\% target. Year-10 NOPAT reaches \$2.45 billion and year-10 FCFF reaches \$2.26 billion.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f8_forecast.pdf}
+	\caption{Ten-year base-case projection: revenue rises to \$16.31B with NOPAT and FCFF building gradually; the shaded band spans the bear--bull revenue range. \figsource{team DCF model \texttt{lulu\_dcf\_forecast.csv}.}}
+	\label{fig:forecast}
+\end{figure}
+
+\begin{table}[H]
+	\caption{Base case valuation summary.}
+	\begin{tabular}{L{0.62\linewidth} R{0.28\linewidth}}
+		\toprule
+		\textbf{Base case metric} & \textbf{Value} \\
+		\midrule
+		Starting revenue & \$11.10B \\
+		Year-10 revenue & \$16.31B \\
+		Year-10 operating margin & 20.0\% \\
+		Year-10 FCFF & \$2.26B \\
+		PV of explicit FCFF & \$11.55B \\
+		PV of terminal value & \$15.99B \\
+		Enterprise value & \$27.54B \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:basecase}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f6_ev_composition.pdf}
+	\caption{Terminal value accounts for about 58\% of enterprise value, underscoring the result's sensitivity to terminal assumptions. \figsource{team DCF model (base case).}}
+	\label{fig:evcomp}
+\end{figure}
+
+Terminal value (terminal growth 2.0\%, terminal WACC 8.25\%) is a large part of the valuation, which is typical but makes the result sensitive to terminal assumptions. To bridge to equity value, we add \$1.81B cash and subtract \$1.80B of debt-like lease liabilities, giving \$27.55B; dividing by 119.1 million diluted shares gives \$231.38 per share.
+
+\begin{table}[H]
+	\caption{Equity bridge.}
+	\begin{tabular}{L{0.62\linewidth} R{0.28\linewidth}}
+		\toprule
+		\textbf{Equity bridge} & \textbf{Value} \\
+		\midrule
+		Enterprise value & \$27.54B \\
+		Add: cash & \$1.81B \\
+		Less: debt-like leases & \$(1.80)B \\
+		\midrule
+		Equity value & \$27.55B \\
+		Diluted shares & 119.1M \\
+		\textbf{Fair value / share} & \textbf{\$231.38} \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:bridge}
+\end{table}
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f5_equity_bridge.pdf}
+	\caption{Equity bridge: enterprise value plus cash, less debt-like lease liabilities, divided by 119.1M diluted shares, yields \$231.38 per share. \figsource{team DCF model (report Tables~\ref{tab:basecase}--\ref{tab:bridge}).}}
+	\label{fig:bridge}
+\end{figure}
+
+Versus the June 15, 2026 closing price of \$116.21, the market price sits about 49.8\% below the base-case fair value, implying roughly 99\% upside \autocite{marketwatch2026}. This gap is not proof the market is wrong; it identifies the key disagreement. Our model assumes recent Americas weakness is serious but manageable, while the market price appears to reflect a more severe or persistent deterioration.
+
+%---------------------------------------------------------------- 8
+\section{Scenario \& Sensitivity}
+
+To avoid relying on a single point estimate, we evaluate bear, base, and bull scenarios (Table~\ref{tab:scenario}). Even the bear case exceeds the market price of \$116.21; rather than implying low downside risk, this shows our calibrated bear case may still be less pessimistic than the story embedded in the market price. The wide \$170--\$386 range shows how sensitive the valuation is to long-term assumptions.
+
+\begin{figure}[H]
+	\centering
+	\includegraphics[width=\linewidth]{fig/f4_scenario_vs_market.pdf}
+	\caption{All three DCF scenarios sit above the June 15, 2026 market price of \$116.21. \figsource{team DCF model \texttt{lulu\_scenario\_summary.csv}; market price MarketWatch (15 Jun 2026).}}
+	\label{fig:scenario_chart}
+\end{figure}
+
+We also test two sensitivity tables. Varying terminal WACC and terminal growth, the most conservative normal point (9.5\% WACC, 1.0\% growth) still gives about \$186.69. Varying year-5 growth and target margin, the most conservative point (2.5\% growth, 17.0\% margin) still gives about \$185.55. Because ordinary tables still do not reconcile with the market price, we add a market-implied stress test: values close to \$116 require very pessimistic combinations, such as a terminal WACC near 12.0\% with an 18.0\% margin. We did not use Monte Carlo simulation; scenarios, sensitivity tables, and the stress test better match a reproducible case study.
+
+%---------------------------------------------------------------- 9
+\section{Market Price Gap}
+
+The largest issue is the gap between the base-case fair value of \$231.38 and the market price of \$116.21 \autocite{marketwatch2026}. The useful question is not ``is the stock cheap?'' but ``what assumptions must be true for the market price to be reasonable?'' Our base case assumes recent weakness is meaningful but not permanent --- the Americas stabilizes at low growth, China Mainland and Rest of World remain growth engines, and operating margin partially recovers to 20.0\%.
+
+The market price may imply a different story: that North America weakness is structural, that international growth slows before it can offset Americas pressure, or that lululemon will need more promotions and markdowns to defend share --- and may apply a higher risk premium for discretionary, fashion, tariff, China, and execution risk. The DCF also has limits: it does not directly model fashion relevance, product innovation, customer acquisition costs, future tariffs, or competitor reactions, and it relies heavily on terminal value.
+
+%---------------------------------------------------------------- 10
+\section{Conclusion}
+
+lululemon appears undervalued under the calibrated base-case DCF (\$231.38 vs.\ \$116.21 on June 15, 2026). All three scenarios produce values above the market price, but the gap should be read as a disagreement about the company's future rather than a simple trading signal. The most important assumption is whether lululemon can stabilize the Americas while continuing to grow internationally and partially recover operating margin.
+
+We therefore recommend presenting the result as a \textbf{testable disagreement}: state the assumptions under which lululemon is undervalued, and the pessimistic assumptions under which the market price is justified, so readers can adjust growth, margin, reinvestment, WACC, or terminal inputs and re-derive the conclusion.
+
+\end{multicols}
+
+%---------------------------------------------------------------- full-width scenario table
+\begin{table*}
+	\caption{Scenario summary --- fair value per share by scenario.}
+	\begin{tabular}{L{0.14\linewidth} L{0.62\linewidth} R{0.14\linewidth}}
+		\toprule
+		\textbf{Scenario} & \textbf{Key story} & \textbf{Fair value / share} \\
+		\midrule
+		Bear & Persistent Americas weakness, lower margin recovery (op.\ margin 18.0\%, higher WACC) & \$170.00 \\
+		Base & Mature-growth transition, partial margin recovery (op.\ margin 20.0\%) & \$231.38 \\
+		Bull & Stronger international growth and operating leverage (op.\ margin 22.5\%) & \$385.63 \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:scenario}
+\end{table*}
+
+\begin{figure*}[ht]
+	\centering
+	\includegraphics[width=0.92\textwidth]{fig/f7_sensitivity.pdf}
+	\caption{Sensitivity of the base-case fair value per share. Left: terminal WACC versus terminal growth. Right: year-5 revenue growth versus target operating margin. The navy box marks the base case (\$231). \figsource{team sensitivity tables \texttt{lulu\_sensitivity\_wacc\_terminal\_growth.csv} and \texttt{lulu\_sensitivity\_growth\_margin.csv}.}}
+	\label{fig:sensitivity}
+\end{figure*}
+
+%---------------------------------------------------------------- APPENDICES
+\newpage
+\section*{Appendices}
+\begin{appendices}
+
+\section{Data and Code Files}
+
+The analysis uses public financial and operating data for lululemon athletica inc.\ (CIK 0001397187), collected from the SEC submissions and company facts APIs \autocite{secsubmissions,seccompanyfacts} and from the annual and quarterly reports \autocite{lulu10k,lulu10q}. Key processed data files and model code:
+
+\begin{table}[H]
+	\caption{Key processed data files.}
+	\begin{tabular}{L{0.42\linewidth} L{0.5\linewidth}}
+		\toprule
+		\textbf{File} & \textbf{Purpose} \\
+		\midrule
+		\texttt{lulu\_annual\_curated.csv} & Curated annual income statement, balance sheet, shares, EPS, inventory, cash \\
+		\texttt{lulu\_operating\_metrics.csv} & Store count, geographic/product revenue, growth, comparable sales \\
+		\texttt{lulu\_historical\_ratios.csv} & Margins, growth rates, inventory-to-revenue, lease liabilities \\
+		\texttt{lulu\_valuation\_assumptions.csv} & Bear, base, and bull DCF assumptions \\
+		\texttt{lulu\_wacc\_build.csv} & CAPM/WACC sanity check for scenario discount rates \\
+		\texttt{lulu\_dcf\_forecast.csv} & Ten-year DCF forecast by scenario \\
+		\texttt{lulu\_scenario\_summary.csv} & Enterprise value, equity value, fair value per share \\
+		\texttt{lulu\_sensitivity\_*.csv} & WACC/growth and growth/margin sensitivity tables \\
+		\texttt{lulu\_market\_implied\_stress.csv} & Stress-test assumptions near the market price \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\begin{table}[H]
+	\caption{Key code files.}
+	\begin{tabular}{L{0.42\linewidth} L{0.5\linewidth}}
+		\toprule
+		\textbf{File} & \textbf{Purpose} \\
+		\midrule
+		\texttt{fetch\_lulu\_sec.py} & Download SEC submissions and company facts data \\
+		\texttt{extract\_lulu\_operating\_data.py} & Extract candidate operating tables and filing snippets \\
+		\texttt{curate\_lulu\_operating\_metrics.py} & Curate operating metrics from filing tables \\
+		\texttt{build\_lulu\_valuation.py} & Build ratios, DCF forecast, scenario summary, Excel \\
+		\texttt{build\_lulu\_sensitivity.py} & Build sensitivity tables and stress test \\
+		\texttt{build\_dashboard\_data.py} & Convert valuation outputs into dashboard data \\
+		\bottomrule
+	\end{tabular}
+\end{table}
+
+\section{WACC Sanity Check}
+
+The DCF model uses scenario-calibrated WACC assumptions, but we also build a CAPM/WACC sanity check so the discount rate is not an unsupported input. Around the June 15, 2026 valuation date, the 10-year U.S.\ Treasury constant maturity yield was 4.47\%, which we use as the risk-free rate \autocite{fredDGS10}. We then estimate cost of equity using beta, an equity risk premium benchmark, and a small company-specific scenario adjustment:
+
+\begin{equation}
+R_E = R_f + \beta \times \text{ERP} + \alpha
+\end{equation}
+
+Because lululemon has limited traditional financial debt but meaningful operating lease obligations, we treat operating lease liabilities as debt-like financing in the WACC bridge. This is consistent with the equity bridge, where lease liabilities are deducted from enterprise value to estimate equity value. The model uses the valuation-date market capitalization as the market value of equity and fiscal 2025 operating lease liabilities as the debt-like claim.
+
+\begin{table}[H]
+	\caption{CAPM/WACC sanity check by scenario.}
+	\begin{tabular}{L{0.13\linewidth} R{0.10\linewidth} R{0.08\linewidth} R{0.10\linewidth} R{0.10\linewidth} R{0.12\linewidth} R{0.12\linewidth} R{0.12\linewidth}}
+		\toprule
+		\textbf{Scenario} & \textbf{$R_f$} & \textbf{Beta} & \textbf{ERP} & \textbf{Extra risk} & \textbf{Cost of equity} & \textbf{Approx. WACC} & \textbf{Model WACC} \\
+		\midrule
+		Bear & 4.47\% & 1.20 & 5.00\% & 0.50\% & 10.97\% & 10.26\% & 10.00\% \\
+		Base & 4.47\% & 1.05 & 4.70\% & 0.30\% & 9.71\% & 9.11\% & 9.25\% \\
+		Bull & 4.47\% & 0.95 & 4.50\% & 0.00\% & 8.74\% & 8.23\% & 8.25\% \\
+		\bottomrule
+	\end{tabular}
+	\label{tab:waccsanity}
+\end{table}
+
+This check supports the model's WACC assumptions. The base-case WACC bridge produces an approximate WACC of 9.11\%, close to the 9.25\% starting WACC used in the DCF. We keep 9.25\% in the model because lululemon faces discretionary retail risk, brand execution risk, and uncertainty around the Americas slowdown. The terminal WACC is lower at 8.25\% because the terminal period assumes lululemon has become a more mature premium retailer with less transition risk. A more advanced model could refine this section with peer-company betas, a more detailed lease-implied cost of debt, and updated equity risk premium data, but the bridge is sufficient for a course-project sanity check \autocite{damodaranData}.
+
+\section{Reproducibility}
+
+To reproduce the valuation, start from the processed annual and operating metric files, review \texttt{lulu\_valuation\_assumptions.csv}, and run the valuation and sensitivity scripts. The most important assumptions to test are revenue growth, target operating margin, sales-to-capital, WACC, terminal growth, and the treatment of operating lease liabilities as debt-like claims. AI supported planning, data organization, code generation, model review, and drafting; human team members remain responsible for the final report, assumptions, interpretation, and conclusions.
+
+\end{appendices}
+
+%---------------------------------------------------------------- REFERENCES
+\newpage
+\begin{multicols}{2}
+\addcontentsline{toc}{section}{Reference List}
+\printbibliography[title=Reference List]
+\end{multicols}
+
+\end{document}
