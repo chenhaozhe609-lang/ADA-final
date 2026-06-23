@@ -129,6 +129,11 @@
       background: var(--surface);
       box-shadow: 0 10px 24px oklch(24% 0.04 255 / 0.04);
     }
+    table.data-table th:nth-child(1) { width: 17%; }
+    table.data-table th:nth-child(2) { width: 28%; }
+    table.data-table th:nth-child(3) { width: 20%; }
+    table.data-table th:nth-child(4) { width: 20%; }
+    table.data-table th:nth-child(5) { width: 15%; }
     th {
       background: var(--deep);
       color: oklch(98% 0.006 82);
@@ -137,11 +142,13 @@
       border: 1px solid var(--deep);
       font-weight: 700;
       vertical-align: top;
+      overflow-wrap: anywhere;
     }
     td {
       padding: 11px 12px;
       border: 1px solid var(--line);
       vertical-align: top;
+      overflow-wrap: anywhere;
     }
     tbody tr:nth-child(even) td { background: oklch(97.8% 0.006 255); }
     .term {
@@ -161,6 +168,14 @@
       padding: 1px 5px;
       font-family: "Cascadia Mono", Consolas, monospace;
       font-size: 12px;
+      line-height: 1.55;
+      white-space: normal;
+      overflow-wrap: anywhere;
+      word-break: break-word;
+    }
+    td code {
+      display: inline;
+      max-width: 100%;
     }
     .formula {
       background: var(--surface);
@@ -549,14 +564,14 @@
     <h2>五、使用到的数据类型</h2>
     <p class="note">这里按“数据从哪里来、被加工成什么、在模型中做什么”整理。</p>
 
-    <table>
+    <table class="data-table">
       <thead>
         <tr>
-          <th style="width: 18%">数据类型</th>
-          <th style="width: 23%">主要文件 / 来源</th>
-          <th style="width: 22%">包含内容</th>
-          <th style="width: 20%">在估值中的作用</th>
-          <th style="width: 17%">注意事项</th>
+          <th>数据类型</th>
+          <th>主要文件 / 来源</th>
+          <th>包含内容</th>
+          <th>在估值中的作用</th>
+          <th>注意事项</th>
         </tr>
       </thead>
       <tbody>
